@@ -27,7 +27,7 @@ function CardMenu(props) {
                 </a>
                 <a className='href_a' href='/AboutStom'>
                     <span>
-                         О клинике
+                        О клинике
                     </span>
                 </a>
                 <a className='href_a' href='/Contacts'>
@@ -36,7 +36,9 @@ function CardMenu(props) {
                     </span>
                 </a>
             </div>
-            <img className='mt-2' src="https://stomcity.ru/templates/smolenskoy/images/stomImages/top_bg.png" />
+            <hr
+                style={{ backgroundImage: `url("https://stomcity.ru/templates/smolenskoy/images/stomImages/line-bg.png")` }}
+            />
         </div>
     );
 }
