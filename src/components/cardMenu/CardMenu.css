@@ -1,0 +1,15 @@
+.href {
+  text-align: end;
+  justify-content: end;
+}
+
+.href_a {
+  width: 5vw;
+  text-decoration: none;
+  color: #49505e;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  background-color: white;
+
+}
