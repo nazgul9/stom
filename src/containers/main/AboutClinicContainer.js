@@ -1,38 +1,64 @@
 import React from 'react';
 import { Row, Card, Col, Button } from 'react-bootstrap';
 import Accordion from '../../components/accrdion/Accordion';
+import AutoVideo from '../../components/Vidoe/AutoVideo'
 import RunText from '../../components/runText/RunText';
-import AutoVideo from '../../components/Vidoe/AutoVideo';
+
 
 function AboutClinicContainer(props) {
+    const data = [
+        {
+            title: "Оборудование, которое видит больше, чем врач",
+            text: "Мы предлагаем нашим пациентам только самые современные в сфере стоматологии технологии и оборудование, которые исключают возможность врачебной ошибки."
+        },
+        {
+            title: "Консилиум врачей по преображению каждой улыбки",
+            text: "За эстетику и функциональность зубов лично отвечают все специалисты клиники, которые участвуют в создании улыбки."
+        },
+        {
+            title: "Работаем даже с самыми сложными случаями",
+            text: "Опыт наших врачей, современное оборудование и материалы позволяют создать восхитительную улыбку при любой клинической ситуации."
+        },
+        {
+            title: "Высокое качество услуг и сервиса",
+            text: "Американские технологии и передовые зарубежные методики, привезённые в Россию. Нашим врачам доверяют улыбки популярные люди и члены их семьей."
+        },
+        {
+            title: "Пошаговый план лечения без скрытых расходов",
+            text: "Полный чекап полости рта и составление цифрового плана лечения с предоставлением наглядных пошаговых действий и их стоимости."
+        },
+    ]
+
     return (
         <div className='container aboutClinic'>
-            <div className='container  '>
+            <div className='container mt-5 '>
                 <>
-                    <span className='h1'>С нами вы<br /> улыбаетесь чаще</span>
+                    <span className='h1 mt-3'>С нами вы<br /> улыбаетесь чаще</span>
                     <Row>
                         <Col xs={12} md={6} >
-                            <p className='text_nav h5 mt-3'> Команда клиники «Лаборатория улыбок Dr. Elmar»<br />
+                            <p className='text_nav h5 mt-5'> Команда клиники «Лаборатория улыбок Dr. Elmar»<br />
                                 поможет обрести улыбку мечты. Ответственность. <br />
                                 Профессионализм. Забота о каждом пациенте.</p>
 
-                            <div className='div_a mt-3'>
+                            <div className='div_a mt-4'>
+                                {/* <CollSenter/> */}
                                 <a href=''>Запись на консультацию</a>
                             </div>
                         </Col>
-{/* 
+                        
                         <Col xs={12} md={6}>
-                            <AutoVideo className="mt-4" />
-                        </Col> */}
+                            <AutoVideo />
+                        </Col>
                     </Row>
                 </>
             </div>
-            <RunText />
 
-            <div className='text-center'>
+            <div className='container text-center'>
                 <h1>5 причин доверить нам улыбку</h1>
             </div>
-            {/* <Accordion /> */}
+            <div className='container'>
+                <Accordion name={data} />
+            </div>
             <div className='container mt-3'>
                 <Row>
                     <Col xs={12} md={4} >
@@ -119,6 +145,8 @@ function AboutClinicContainer(props) {
                     <h3 class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
                 </Col>
             </div>
+            <RunText />
+
         </div>
     );
 }
