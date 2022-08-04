@@ -1,48 +1,68 @@
-// import React from 'react';
+import React, { useState } from 'react';
+import { Col } from 'react-bootstrap';
 
-// function Accordion(props) {
-//     return (
-//         <div>
-//             <div class="accordion bg-light">
 
-// <div className='bg-light'>
-//   <input type="checkbox" name="panel" id="panel-1"/>
-//   <label for="panel-1 text-white">Panel 1</label>
-//   <div class="accordion__content accordion__content--small">
-//     <h2 class="accordion__header  text-white">Header</h2>
-//     <p class="accordion__body ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>
-//   </div>
-// </div>
+function Accordion(props) {
+    const [selected, setSelected] = useState(null)
+    const toggle = (i) => {
+        if (selected === i) {
+            return setSelected(null)
+        }
+        setSelected(i)
+    }
+    return (
 
-// <div>
-//   <input type="checkbox" name="panel" id="panel-2"/>
-//   <label for="panel-2">Panel 2</label>
-//   <div class="accordion__content accordion__content--med">
-//     <h2 class="accordion__header">Header</h2>
-//     <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eligendi nulla illo culpa ab in at adipisci eveniet id itaque maxime soluta recusandae doloribus laboriosam dignissimos est aut cupiditate delectus.</p>
-//   </div>
-// </div>
-// <div>
-//   <input type="checkbox" name="panel" id="panel-3"/>
-//   <label for="panel-3">Panel 3</label>
-//   <div class="accordion__content accordion__content--small">
-//     <h2 class="accordion__header">Header</h2>
-//     <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-//   </div>
-// </div>
+        <div className='wrapper container mt-5 '>
+            <hr />
 
-// <div>
-//   <input type="checkbox" name="panel" id="panel-4"/>
-//   <label for="panel-4">Panel 4</label>
-//   <div class="accordion__content accordion__content--large">
-//     <h2 class="accordion__header">Header</h2>
-//     <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
-//   </div>
-// </div>
+            <Col sm={5}>
+                <div className='accordion '>
+                    {props.name.map((item, i) => {
+                        return (
+                            <>
+                                <div className='item'>
+                                    <hr />
+                                    <div className='title' onClick={() => toggle(i)}>
+                                        <p className='h5 text-center'>{item.title}</p>
+                                        <span className='selecteds'>
+                                            {selected === i ? "x" : "+"}
+                                        </span>
+                                    </div>
+                                    <div className={selected === i ? "content show" : "content"}>
+                                        <p>{item.text}</p>
+                                        <p className='text1'>{item.text1}</p>
+                                        <div>
+                                            {' '}
+                                        </div>
+                                        <h5 className='text1'>{item.ptitile}</h5>
+                                        {/* <hr/> */}
+                                        <p className='text1'>{item.price}</p>
+                                        <p className='text1'>{item.price1}</p>
+                                        <p className='text1'>{item.price2}</p>
+                                        <p className='text1'>{item.price3}</p>
+                                        <p className='text1'>{item.price4}</p>
+                                        <p className='text1'>{item.price5}</p>
+                                        <p className='text1'>{item.price6}</p>
+                                        <p className='text1'>{item.price7}</p>
+                                        <p className='text1'>{item.price8}</p>
+                                        <p className='text1'>{item.price9}</p>
+                                        <p className='text1'>{item.price10}</p>
+                                        <p className='text1'>{item.price11}</p>
+                                        <p className='text1'>{item.price12}</p>
+                                        <h5 className='text1'>{item.price_price}</h5>
 
-// </div>
-//         </div>
-//     );
-// }
+                                    </div>
+                                </div>
+                                <hr />
 
-// export default Accordion;
+                            </>
+                        )
+                    })}
+                </div>
+            </Col>
+        </div>
+    );
+}
+
+
+export default Accordion;
