@@ -1,0 +1,23 @@
+span {
+    color: #d3bb7e;
+    font-size: 4rem;
+    margin-top: 20px;
+}
+.div_a {
+    width: 250px;
+    height: 50px;
+    color: #060608;
+    font-size: 14px;
+    font-family: 'GraphikTT', Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    border-width: 2px;
+    border-radius: 0px;
+    background-color: #d3bb7e;
+    background-position: center center;
+    position: center;
+    border-color: #d3bb7e;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+}
