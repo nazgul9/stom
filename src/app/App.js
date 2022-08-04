@@ -7,6 +7,7 @@ import PriceContainer from '../containers/main/PriceContainer';
 import ResulttsContainer from '../containers/main/ResulttsContainer';
 import StuffContainer from '../containers/main/StuffContainer';
 import ContactContainer from '../containers/main/ContactContainer';
+import ServiceContainer from '../containers/main/ServiceContainer';
 import './App.scss'
 
 function App(props) {
@@ -19,7 +20,8 @@ function App(props) {
     <Route path={'/price'} element={<PriceContainer/>}/>
     <Route path={'/result'} element={<ResulttsContainer/>}/>
     <Route path={'/stuff'} element={<StuffContainer/>}/>
-    <Route path={'/contact'} element={<ContactContainer/>}/>  
+    <Route path={'/contact'} element={<ContactContainer/>}/> 
+    <Route path={'/service'} element={<ServiceContainer/>}/>  
   </Routes>
   </>
   );
