@@ -6,12 +6,12 @@ import { Navbar,Container,Nav ,NavDropdown,Col, Row } from 'react-bootstrap';
 function AppContainers(props) {
     return (
         <div>
-             <Navbar bg="dark" variant="dark"  expand="lg" fixed='top'  >
+             <Navbar bg="dark" variant="dark" style={{backgroundColor:"#060608"}} expand="lg" fixed='top'  >
       <Container style={{marginLeft:"20%",}}>
-        <Navbar.Brand href="">Dr Aidarov</Navbar.Brand>
+        <Navbar.Brand > <img src="https://static.tildacdn.com/tild6462-6533-4166-a665-376166353633/logo.svg"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav  >
+          <Nav>
             <Nav.Link href="/aboutClinic" className='nav_text'>О Клинике</Nav.Link>
             <NavDropdown title="Услуги" id="basic-nav-dropdown" className='nav_text'>
               <NavDropdown.Item href="/service">Action</NavDropdown.Item>

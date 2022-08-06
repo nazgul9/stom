@@ -8,6 +8,7 @@ import ResulttsContainer from '../containers/main/Results/ResulttsContainer';
 import StuffContainer from '../containers/main/StuffContainer';
 import ContactContainer from '../containers/main/ContactContainer';
 import ServiceContainer from '../containers/main/ServiceContainer';
+import Footer from '../containers/main/Footer';
 import './App.scss'
 
 function App(props) {
@@ -23,6 +24,7 @@ function App(props) {
     <Route path={'/contact'} element={<ContactContainer/>}/> 
     <Route path={'/service'} element={<ServiceContainer/>}/>  
   </Routes>
+    <Footer/>
   </>
   );
 }
