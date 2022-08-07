@@ -1,11 +1,17 @@
-import React from 'react';
+import React ,{useEffect} from 'react';
 import { Row, Card, Col, Button } from 'react-bootstrap';
 import Accordion from '../../components/accrdion/Accordion';
 import AutoVideo from '../../components/Vidoe/AutoVideo'
 import RunText from '../../components/runText/RunText';
+import AOS from "aos";
+
 
 
 function AboutClinicContainer(props) {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     const data = [
         {
             title: "Оборудование, которое видит больше, чем врач",
@@ -53,7 +59,7 @@ function AboutClinicContainer(props) {
                 </>
             </div>
 
-            <div className='container text-center'>
+            <div className='container text-center 'data-aos="fade-up">
                 <h1>5 причин доверить нам улыбку</h1>
             </div>
             <div className='container'>
@@ -62,27 +68,29 @@ function AboutClinicContainer(props) {
             <div className='container mt-3'>
                 <Row>
                     <Col xs={12} md={4} >
-                        <img className='w-100 mb-2' src='https://thumb.tildacdn.com/tild6564-6235-4330-b565-353437343734/-/format/webp/IMG_1364_1.jpeg' alt='' />
+                        <img data-aos="fade-up-right" className='w-100 mb-2' src='https://thumb.tildacdn.com/tild6564-6235-4330-b565-353437343734/-/format/webp/IMG_1364_1.jpeg' alt='' />
                     </Col>
                     <Col xs={12} md={4} >
-                        <img className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3939-3139-4163-b233-373731323231/-/format/webp/IMG_1368.jpeg' alt='' /></Col>
+                        <img data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500"  className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3939-3139-4163-b233-373731323231/-/format/webp/IMG_1368.jpeg' alt='' /></Col>
                     <Col xs={12} md={4}>
-                        <img className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3038-6366-4265-a133-616538313461/-/format/webp/IMG_1374.jpeg' alt='' />
+                        <img  data-aos="fade-left"className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3038-6366-4265-a133-616538313461/-/format/webp/IMG_1374.jpeg' alt='' />
                     </Col>
                 </Row>
             </div>
             <div className=' container mt-5'>
                 <Row>
                     <Col xs={12} md={6} lg={6}>
-                        <div className='justify-content-evenly text-center' >
-                            <img class=" t013__img t-img" src="https://static.tildacdn.com/tild3930-6162-4164-b738-303531323731/photo_2022-06-30_133.svg" imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                        <div data-aos="zoom-in" className='justify-content-evenly text-center' >
+                            <img  class=" t013__img t-img" src="https://static.tildacdn.com/tild3930-6162-4164-b738-303531323731/photo_2022-06-30_133.svg" imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                             </img>
                             <Card.Title className='text_nav'>Доктор Эльмар</Card.Title>
                             <span className='text_nav' style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
                         </div>
                     </Col>
                     <Col xs={12} md={6} lg={6}>
-                        <div className='justify-content-evenly text_nav m-3'>
+                        <div data-aos="zoom-in-up" className='justify-content-evenly text_nav m-3'>
                             <div >
                                 Я хотел, чтобы клиника не напоминала больницу. Поэтому мы создали пространство, которое настраивает<br />
                                 на правильную волну совместного творчества. Если люди приходят лечить зубы как на каторгу, то сложно <br />
@@ -129,20 +137,26 @@ function AboutClinicContainer(props) {
                     </Col>
                 </Row>
             </div>
-            <h1 className='text_nav text-center mt-5'>Здесь вы можете:</h1>
+            <h1 data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom" className='text_nav text-center mt-5'>Здесь вы можете:</h1>
             <div className='container row m-3 p-2'>
                 <Col xs={10} md={6} lg={5}>
-                    <h3 class="tn-atom text-center  p-2 m-2">почитать журналы</h3>
+                    <h3 data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom" class="tn-atom text-center  p-2 m-2">почитать журналы</h3>
                 </Col>
                 <Col xs={10} md={6} lg={5}>
-                    <h3 class="tn-atom text-center p-2 m-2">выпить чашечку кофе</h3>
+                    <h3 data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">выпить чашечку кофе</h3>
                 </Col>
                 <Col xs={10} md={6} lg={5}>
-                    <h3 class="tn-atom text-center p-2 m-2">послушать музыку</h3>
+                    <h3 data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">послушать музыку</h3>
                 </Col> <Col xs={10} md={6} lg={5}>
-                    <h3 class="tn-atom text-center p-2 m-2">пообщаться с сотрудниками</h3>
+                    <h3 data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">пообщаться с сотрудниками</h3>
                 </Col> <Col xs={10} md={6} lg={5}>
-                    <h3 class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
+                    <h3 data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
                 </Col>
             </div>
             <RunText />
