@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './style.scss';
 import App from './app/App';
 import "bootstrap/dist/css/bootstrap.min.css"
+import "aos/dist/aos.css";
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
+import AOS from "aos";
 
 
 function Accordion(props) {
@@ -10,21 +11,28 @@ function Accordion(props) {
         }
         setSelected(i)
     }
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
 
         <div className='wrapper container mt-5 '>
             <hr />
 
             <Col sm={5}>
-                <div className='accordion '>
+                <div className='accordion'>
                     {props.name.map((item, i) => {
                         return (
                             <>
                                 <div className='item'>
                                     <hr />
                                     <div className='title' onClick={() => toggle(i)}>
-                                        <p className='h5 text-center'>{item.title}</p>
-                                        <span className='selecteds'>
+                                        <p data-aos="fade-up"
+                                            data-aos-anchor-placement="top-center" className='h5 text-center'>{item.title}</p>
+                                        <span data-aos="fade-up"
+                                            data-aos-anchor-placement="top-center" className='selecteds'>
                                             {selected === i ? "x" : "+"}
                                         </span>
                                     </div>
