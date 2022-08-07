@@ -1,49 +1,73 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React, {useState} from 'react';
+import { Modal,Form} from 'react-bootstrap';
+import axios from 'axios';
+function CollSenter(props) {
+  const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const token = "bot5271502598:AAG6wzuiEkLl2MTbKTMh8m6T-XAxQi0ZMdo";
 
-function MyVerticallyCenteredModal(props) {
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+
+const setTelegram = () => {
+  axios.get(`https://api.telegram.org/${token}/sendMessage`, {
+      params:{
+          parse_mode:"HTML",
+          chat_id:"917139606",
+          text:`<i>Name: </i> ${name} \n <i>Phone number: </i>${number} \n`,  
+      }
+  })
+  handleClose();
+}
+
+
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
+    <div>
+        <Modal show={show} 
+                       onHide={handleClose} 
+                       size="md"
+                       aria-labelledby="contained-modal-title-vcenter"
+                        centered
+                       >
+        <Modal.Header closeButton
+        style={{backgroundColor:"black", color:"white"}}>
+          <Modal.Title>Запись на консультацию</Modal.Title>
+        </Modal.Header>
+        <Modal.Body  style={{backgroundColor:"black"}}>
+            <p style={{color:"white"}}>В ближайшее время с вами свяжется администратор и подберет для вас удобное время для записи на онлайн- или офлайн-консультацию.</p>
+          <Form style={{backgroundColor:"black", color:"white"}}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label >Ваше имя</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                autoFocus
+                style={{backgroundColor:"black", color:"white"}}
+                onChange={e => setName(e.target.value)}
+              />
+                <Form.Label >Телефон номер</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="+996773000000"
+                autoFocus
+                style={{backgroundColor:"black", color:"white"}}
+                onChange={e => setNumber(e.target.value)}
+              />
+            </Form.Group>
+           
+          </Form>
+          <button className='div_a button'  style={{justifyContent:"center", alignItems:"center"}} 
+           onClick={setTelegram} 
+           disabled={!name || !number}>
+            Отправить
+          </button>
+        </Modal.Body>
+          
+      </Modal>
+    </div>
   );
 }
 
-export default MyVerticallyCenteredModal;
-function App() {
-  const [modalShow, setModalShow] = React.useState(false);
-
-  return (
-    <>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
-
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </>
-  );
-}
+export default CollSenter;
