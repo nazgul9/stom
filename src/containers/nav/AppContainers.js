@@ -14,7 +14,7 @@ function AppContainers(props) {
           <Nav>
             <Nav.Link href="/aboutClinic" className='nav_text'>О Клинике</Nav.Link>
             <NavDropdown title="Услуги" id="basic-nav-dropdown" className='nav_text'>
-              <NavDropdown.Item href="/service">Action</NavDropdown.Item>
+              <NavDropdown.Item href="/Chec_Up">Чекап</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
