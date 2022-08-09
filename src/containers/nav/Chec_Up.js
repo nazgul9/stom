@@ -36,6 +36,7 @@ function Chec_Up(props) {
         },
 
     ]
+
     const patients = [
         {
             img: "https://thumb.tildacdn.com/tild3534-3033-4632-b064-356232633331/-/cover/720x1100/center/center/-/format/webp/G_98zN2SdVE.jpg",
