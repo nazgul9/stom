@@ -7,7 +7,7 @@ function AppContainers(props) {
   return (
     <div className="container">
       <Navbar bg="dark" variant="dark" style={{ backgroundColor: "#060608" }} expand="lg" fixed='top'  >
-        <Container style={{ marginLeft: "20%", }}>
+        <Container >
           <Navbar.Brand > <img src="https://static.tildacdn.com/tild6462-6533-4166-a665-376166353633/logo.svg" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -18,7 +18,7 @@ function AppContainers(props) {
                 <NavDropdown.Item href="/Vinery">Винеры</NavDropdown.Item>
                 <NavDropdown.Item href="/Elainery">Элайнеры</NavDropdown.Item>
                 <NavDropdown.Item href="/Brekety">Брекеты</NavDropdown.Item>
-                <NavDropdown.Item href="/Otbali">Отбеливание</NavDropdown.Item>
+                <NavDropdown.Item href="/whiting">Отбеливание</NavDropdown.Item>
                 <NavDropdown.Item href="/Iplant">Имплантация</NavDropdown.Item>
                 <NavDropdown.Item href="/Protez">протезирования</NavDropdown.Item>
                 <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item>

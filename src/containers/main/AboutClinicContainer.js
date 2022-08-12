@@ -2,9 +2,10 @@ import React ,{useEffect} from 'react';
 import { Row, Card, Col, Button } from 'react-bootstrap';
 import Accordion from '../../components/accrdion/Accordion';
 import AutoVideo from '../../components/Vidoe/AutoVideo'
+import StuffContainer from '../../containers/main/StuffContainer'
 import RunText from '../../components/runText/RunText';
 import AOS from "aos";
-
+import imgg from '../../img/imgg.jpeg'
 
 
 function AboutClinicContainer(props) {
@@ -42,13 +43,13 @@ function AboutClinicContainer(props) {
                     <span className='h1 mt-3'>С нами вы<br /> улыбаетесь чаще</span>
                     <Row>
                         <Col xs={12} md={6} >
-                            <p className='text_nav h5 mt-5'> Команда клиники «Лаборатория улыбок Dr. Elmar»<br />
+                            <p className='text_nav h5 mt-5'> Команда клиники «Лаборатория улыбок Dr. Айдаров<br />
                                 поможет обрести улыбку мечты. Ответственность. <br />
                                 Профессионализм. Забота о каждом пациенте.</p>
 
                             <div className='div_a mt-4'>
                                 {/* <CollSenter/> */}
-                                <a href=''>Запись на консультацию</a>
+                                <p>Запись на консультацию</p>
                             </div>
                         </Col>
                         
@@ -79,13 +80,13 @@ function AboutClinicContainer(props) {
                     </Col>
                 </Row>
             </div>
-            <div className=' container mt-5'>
+            <div className='container mt-5'>
                 <Row>
                     <Col xs={12} md={6} lg={6}>
-                        <div data-aos="zoom-in" className='justify-content-evenly text-center' >
-                            <img  class=" t013__img t-img" src="https://static.tildacdn.com/tild3930-6162-4164-b738-303531323731/photo_2022-06-30_133.svg" imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                        <div data-aos="zoom-in" className='justify-content-evenly a text-center' >
+                            <img  class=" t013__img t-img" src={imgg} imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                             </img>
-                            <Card.Title className='text_nav'>Доктор Эльмар</Card.Title>
+                            <Card.Title className='text_nav'>Доктор Айдаров</Card.Title>
                             <span className='text_nav' style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
                         </div>
                     </Col>
@@ -110,18 +111,14 @@ function AboutClinicContainer(props) {
                 <Row >
                     <Col xs={12} md={6} lg={6}>
                         <div className='d-block'><span className='display-3 h1'>Давайте<br />познакомимся <br />поближе</span>
-                            <Card className='bg-dark'>
-                                <Card.Body>
-                                    <Card.Text className='text_nav '>
+                                    <div className='text_nav '>
                                         Стоматологическая клиника «Лаборатория улыбок»<br />
                                         преображает улыбки пациентов с 2015 года. Её основатель <br />
-                                        Эльмар Бабаев прошёл путь от работы в государственной<br />
+                                        Айдаров прошёл путь от работы в государственной<br />
                                         поликлинике до открытия собственной клиники в центре<br />
                                         Москвы и на своём опыте знает, что главными приоритетами<br />
                                         в работе врача являются забота о пациентах и качество услуг.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
+                                    </div>
                         </div>
                     </Col>
                     <Col xs={12} md={6} lg={6}>
@@ -159,6 +156,7 @@ function AboutClinicContainer(props) {
                         data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
                 </Col>
             </div>
+            <StuffContainer/>
             <RunText />
 
         </div>
