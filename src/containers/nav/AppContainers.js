@@ -5,7 +5,7 @@ import { Navbar, Container, Nav, NavDropdown, Col, Row } from 'react-bootstrap';
 
 function AppContainers(props) {
   return (
-    <div className="тзь ыефке">
+    <div className="container">
       <Navbar bg="dark" variant="dark" style={{ backgroundColor: "#060608" }} expand="lg" fixed='top'  >
         <Container >
           <Navbar.Brand > <img src="https://static.tildacdn.com/tild6462-6533-4166-a665-376166353633/logo.svg" /></Navbar.Brand>
@@ -16,12 +16,12 @@ function AppContainers(props) {
               <NavDropdown title="Услуги" id="basic-nav-dropdown" className='nav_text'>
                 <NavDropdown.Item href="/Chec_Up">Чекап</NavDropdown.Item>
                 <NavDropdown.Item href="/Vinery">Винеры</NavDropdown.Item>
-                {/* <NavDropdown.Item href="/Elainery">Элайнеры</NavDropdown.Item> */}
+                <NavDropdown.Item href="/Elainery">Элайнеры</NavDropdown.Item>
                 <NavDropdown.Item href="/Brekety">Брекеты</NavDropdown.Item>
-                {/* <NavDropdown.Item href="/Отбеливание">Отбеливание</NavDropdown.Item>
+                <NavDropdown.Item href="/whiting">Отбеливание</NavDropdown.Item>
                 <NavDropdown.Item href="/Iplant">Имплантация</NavDropdown.Item>
                 <NavDropdown.Item href="/Protez">протезирования</NavDropdown.Item>
-                <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item> */}
+                <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item>
 
               </NavDropdown>
               <Nav.Link href="price" className='nav_text'>Прайс</Nav.Link>

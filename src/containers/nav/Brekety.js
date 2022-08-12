@@ -4,6 +4,7 @@ import RunText from '../../components/runText/RunText';
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import AOS from 'aos'
 import Accordion from '../../components/accrdion/Accordion';
+import imgg from  '../../img/imgg.jpeg'
 
 function Brekety(props) {
     useEffect(() => {
@@ -109,8 +110,8 @@ function Brekety(props) {
                                 <Col md={4} xs={6}>
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
-                                        <Card.Text style={{ color: "white", textAlign: "center" }}>{e.title}</Card.Text>
-                                        <Card.Text style={{ color: "white", textAlign: "center" }}>{e.known_for}</Card.Text>
+                                        <Card.Title className="mt-3" style={{ color: "white", }}>{e.title}</Card.Title>
+                                        <Card.Text className="mt-1" style={{ color: "white", }}>{e.known_for}</Card.Text>
                                     </div>
                                 </Col>
                             </>
@@ -121,7 +122,7 @@ function Brekety(props) {
                 <Row className="mt-5">
                     <Col xs={12} md={6} lg={6}>
                         <div data-aos="zoom-in" className='justify-content-evenly text-center' >
-                            <img class=" t013__img t-img" src="https://static.tildacdn.com/tild3930-6162-4164-b738-303531323731/photo_2022-06-30_133.svg" imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                            <img class=" t013__img t-img" src={imgg} imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                             </img>
                             <Card.Title className='text_nav'>Доктор Эльмар</Card.Title>
                             <span className='text_nav' style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
@@ -157,7 +158,7 @@ function Brekety(props) {
                     </Col>
                 </Row>
                 <div className="container">
-                    <p className="" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                    <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                         Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* сом.
                     </p>
                     <span className='div_a '>Записаться на консултацию</span>
@@ -185,7 +186,7 @@ function Brekety(props) {
                         </span>
                         <Col>
                             <h3 data-aos="fade-up"
-                                data-aos-anchor-placement="top-bottom" class="tn-atom text-center  p-2 m-2">Неправильное расположение зубов</h3>
+                                data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">Неправильное расположение зубов</h3>
                         </Col>
                         <Col>
                             <h3 data-aos="fade-up"

@@ -32,12 +32,12 @@ function App(props) {
         <Route path={'/contact'} element={<ContactContainer />} />
         <Route path={'/chec_up'} element={<Chec_Up />} />
         <Route path={"/Vinery"} element={<Vinery />} />
-        <Route path={"/Elainery"} element={<Elainery />} />
+        {/* <Route path={"/Elainery"} element={<Elainery />} /> */}
         <Route path={'/Brekety'} element={<Brekety />} />
-        <Route path={'/Otbali'} element={<Otbali />} />
+        <Route path={'/whiting'} element={<Otbali />} />
         <Route path={'/Iplant'} element={<Iplant />} />
-        <Route path={'/Protez'} element={<Protez />} />
-        <Route path={'/Lechenie'} element={<Lechenie />} />
+        {/* <Route path={'/Protez'} element={<Protez />} />
+        <Route path={'/Lechenie'} element={<Lechenie />} /> */}
 
       </Routes>
       <Footer />

@@ -4,6 +4,7 @@ import CollSenter from '../../components/collSenter/CollSenter';
 import AutoVideo from '../../components/Vidoe/AutoVideo'
 import RunText from '../../components/runText/RunText'
 import Accordion from '../../components/accrdion/Accordion'
+import imgg from '../../img/imgg.jpeg'
 import AOS from 'aos'
 
 
@@ -55,11 +56,6 @@ function Chec_Up(props) {
         }
     ]
 
-    const [openComponent, setOpenComponent] = useState(false)
-    const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     return (
         <div className="container">
             <Row>
@@ -71,10 +67,7 @@ function Chec_Up(props) {
                         Комплексная проверка состояния полости рта. Разработка этапов лечения. Консилиум опытных врачей клиники для составления персонального плана по созданию идеально ровной и красивой улыбки.
                     </Card.Text>
                     <div className='div_a'>
-                        {
-                            openComponent === true ? <CollSenter /> : ''
-                        }
-                        <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
+                        <> Записаться на консултацию </>
                     </div>
                 </Col>
                 <Col className='mt-5'>
@@ -94,8 +87,8 @@ function Chec_Up(props) {
                                 <Col md={4} xs={6}>
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
-                                        <Card.Text style={{ color: "white", textAlign: "center" }}>{e.title}</Card.Text>
-                                        <Card.Text style={{ color: "white", textAlign: "center" }}>{e.known_for}</Card.Text>
+                                        <Card.Title class="mt-3 h4" style={{ color: "white", }}>{e.title}</Card.Title>
+                                        <Card.Text style={{ color: "white", }}>{e.known_for}</Card.Text>
                                     </div>
                                 </Col>
                             </>
@@ -106,9 +99,9 @@ function Chec_Up(props) {
                 <Row className="mt-5">
                     <Col xs={12} md={6} lg={6}>
                         <div className='justify-content-evenly text-center  ' >
-                            <img class=" t013__img t-img" src="https://static.tildacdn.com/tild3930-6162-4164-b738-303531323731/photo_2022-06-30_133.svg" imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                            <img class=" t013__img t-img" src={imgg} imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                             </img>
-                            <Card.Title className='text_nav'>Доктор Эльмар</Card.Title>
+                            <Card.Title className='text_nav'>Доктор Айдаров</Card.Title>
                             <span className='text_nav' style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
                         </div>
                     </Col>
@@ -126,7 +119,10 @@ function Chec_Up(props) {
             </div>
             <div className="container">
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
-                    Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* руб.
+                    Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* современное.
+                    <div className='div_a'>
+                        <> Записаться на консултацию </>
+                    </div>
                 </p>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
             </div>
@@ -149,29 +145,27 @@ function Chec_Up(props) {
                     </Card.Img>
                 </Col>
                 <Col md={6} className={"m-5"}>
-                <Card.Text style={{ color: "#d3bb7e", fontSize: "40px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
-                Чекап включает в себя:
+                    <Card.Text style={{ color: "#d3bb7e", fontSize: "40px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                        Чекап включает в себя:
                     </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px" ,marginTop: "40px"}}>
-                    осмотр пациента 
+                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                        осмотр пациента
                     </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px" ,marginTop: "40px"}}>
-                    диагностику (снимки КТ, ОПТГ)
+                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                        диагностику (снимки КТ, ОПТГ)
                     </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px" ,marginTop: "40px"}}>
-                    консультацию врача
+                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                        консультацию врача
                     </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px" ,marginTop: "40px"}}>
-                    консультацию врача
+                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                        консультацию врача
                     </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px",marginTop: "40px" }}>
-                    создание цифровых слепков нижней и верхней челюстей
+                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                        создание цифровых слепков нижней и верхней челюстей
                     </Card.Text>
                     <div className='div_a'>
-                        {
-                            openComponent === true ? <CollSenter /> : ''
-                        }
-                        <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
+                        
+                        <p> Записаться на консултацию </p>
                     </div>
 
                 </Col>

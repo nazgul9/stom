@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Card, Modal, } from 'react-bootstrap';
-import CollSenter from '../../components/collSenter/CollSenter';
-import { Link } from 'react-router-dom';
+import imgg from '../../img/imgg.jpeg'
 
 function StuffContainer(props) {
 
@@ -87,10 +86,8 @@ function StuffContainer(props) {
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
                         </Card.Text>
                         <div className='div_a'>
-                            {
-                                openComponent === true ? <CollSenter /> : ''
-                            }
-                            <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
+                          
+                            <p> Записаться на консултацию </p>
                         </div>
 
                     </Col>
@@ -104,13 +101,13 @@ function StuffContainer(props) {
                     </Col>
                     <Col md={6} >
 
-                        <Card.Img src='https://thumb.tildacdn.com/tild3466-6363-4434-b166-616561306137/-/format/webp/__1.png'>
+                        <Card.Img className='w-75 h-100 mt-3' src={imgg}>
 
                         </Card.Img>
                     </Col>
                     <Col md={6} className='mt-5'>
                         <h4 style={{ color: "white" }}>
-                            Эльмар Бабаев — основатель и главный врач клиники «Лаборатория улыбок Dr. Elmar». Кандидат медицинских наук, стоматолог-ортопед.   </h4>
+                            Бекмамат Айдаров — основатель и главный врач клиники «Лаборатория улыбок Dr. Elmar». Кандидат медицинских наук, стоматолог-ортопед.   </h4>
                         <p className='textdoctor'>
                             Благодаря высокому качеству оказываемых услуг, к доктору Эльмару приезжают пациенты из разных точек мира.
                             Трудолюбие, уважительное отношение к каждому пациенту и любовь к красоте делают доктора Эльмара настоящим профессионалом в сфере стоматологии.
@@ -148,9 +145,7 @@ function StuffContainer(props) {
                                     <Card.Text style={{ color: "white", textAlign: "center" }}> {e.title}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.position}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.experience}</Card.Text>
-                                    <div className='div_a' onClick={handleShow} >
-                                        <p> Подробнее о враче </p>
-                                    </div>
+                                 Z
                                     <div className='div_b'  >
                                         <p> Записаться на прием </p>
                                     </div>

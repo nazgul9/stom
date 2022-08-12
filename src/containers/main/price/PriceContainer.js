@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Card } from "react-bootstrap"
 import Accordion from '../../../components/accrdion/Accordion'
 import RunText from '../../../components/runText/RunText'
+import imgg from '../../../img/imgg.jpeg'
 
 const data = [
     {
@@ -80,7 +81,7 @@ function PriceContainer(props) {
                 <Row>
                     <Col xs={12} md={6} lg={6}>
                         <div className='justify-content-center text-center' >
-                            <img class=" t013__img t-img" src="https://static.tildacdn.com/tild3930-6162-4164-b738-303531323731/photo_2022-06-30_133.svg" imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                            <img class=" t013__img t-img" src={imgg} imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                             </img>
                             <Card.Title className='text_nav'>Доктор Эльмар</Card.Title>
                             <span className='text_nav' style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
