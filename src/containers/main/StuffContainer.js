@@ -87,9 +87,7 @@ function StuffContainer(props) {
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
                         </Card.Text>
                         <div className='div_a'>
-                            {
-                                openComponent === true ? <CollSenter /> : ''
-                            }
+                            {openComponent === true ? <CollSenter /> : ''}
                             <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
                         </div>
 
