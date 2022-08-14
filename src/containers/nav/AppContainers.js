@@ -2,13 +2,14 @@
 import React from 'react';
 import './Appcontainer.scss';
 import { Navbar, Container, Nav, NavDropdown, Col, Row } from 'react-bootstrap';
-
+import image from '../Image/doctor.jpg'
 function AppContainers(props) {
   return (
     <div className="container">
-      <Navbar bg="dark" variant="dark" style={{ backgroundColor: "#060608" }} expand="lg" fixed='top'  >
-        <Container >
-          <Navbar.Brand > <img src="https://static.tildacdn.com/tild6462-6533-4166-a665-376166353633/logo.svg" /></Navbar.Brand>
+      <Navbar bg="dark" variant="dark" fluid style={{ backgroundColor: "#060608" }} expand="lg" fixed='top'  >
+        <Container style={{ marginLeft: "20%", }}>
+          <Navbar.Brand href="/"> <img style={{width:"80px", height:"80px", borderRadius:"50%"}} src={image} /> DR.Aidarov</Navbar.Brand>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
