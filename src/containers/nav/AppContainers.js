@@ -8,7 +8,7 @@ function AppContainers(props) {
     <div className="container">
       <Navbar bg="dark" variant="dark" fluid style={{ backgroundColor: "#060608" }} expand="lg" fixed='top'  >
         <Container style={{ marginLeft: "20%", }}>
-          <Navbar.Brand href="/"> <img style={{width:"80px", height:"80px", borderRadius:"50%"}} src={image} /> DR.Aidarov</Navbar.Brand>
+          <Navbar.Brand href="/"> <img style={{width:"80px", height:"80px", borderRadius:"50%",}} className='textnav'src={image} /> DR.Aidarov</Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -21,9 +21,8 @@ function AppContainers(props) {
                 <NavDropdown.Item href="/Brekety">Брекеты</NavDropdown.Item>
                 <NavDropdown.Item href="/whiting">Отбеливание</NavDropdown.Item>
                 <NavDropdown.Item href="/Iplant">Имплантация</NavDropdown.Item>
-                <NavDropdown.Item href="/Protez">протезирования</NavDropdown.Item>
+                <NavDropdown.Item href="/Protez">Протезирования</NavDropdown.Item>
                 <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item>
-
               </NavDropdown>
               <Nav.Link href="price" className='nav_text'>Прайс</Nav.Link>
               <Nav.Link href="stuff" className='nav_text'>Врачи</Nav.Link>

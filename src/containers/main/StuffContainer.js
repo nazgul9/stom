@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Card, Modal, } from 'react-bootstrap';
+import CollSenter from '../../components/collSenter/CollSenter';
 import imgg from '../../img/imgg.jpeg'
 
 function StuffContainer(props) {
@@ -86,7 +87,7 @@ function StuffContainer(props) {
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
                         </Card.Text>
                         <div className='div_a'>
-
+                                    <CollSenter/>
                         </div>
 
                     </Col>

@@ -1,4 +1,5 @@
 import React from 'react';
+import image from '../Image/doctor.jpg'
 
 function Footer() {
     return (
@@ -16,11 +17,11 @@ function Footer() {
                     <div className='row'>
                         {/* collumn1 */}
                         <div className='col'>
-                            <h5 className='textinfooter' ><img src="https://static.tildacdn.com/tild6462-6533-4166-a665-376166353633/logo.svg" /></h5>
+                            <h5 className='textinfooter' ><img style={{width:"80px", height:"80px", borderRadius:"50%",}} src={image} /> Dr.Aidarov</h5>
                             <p className='textdoctor'>Медицинская лицензия</p>
                         </div>
                         <div className='col'>
-                            <h6 className='textinfooter2'>Хиты</h6>
+                            <h6 className='textinfooter'>Хиты</h6>
                             <h6 className='textinfooter2'>Hollywood Smile</h6>
                             <h6 className='textinfooter2'> Выравнивание зубов </h6>
                             <h6 className='textinfooter2'> Эффект бриллиант</h6>
