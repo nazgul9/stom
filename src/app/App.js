@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Routes, Route } from "react-router-dom"
 import MainContainers from '../containers/main/MainContainers';
 import AppContainers from '../containers/nav/AppContainers';
@@ -18,14 +18,17 @@ import Otbali from '../containers/nav/Otbali'
 import Iplant from '../containers/nav/Iplant'
 import Protez from '../containers/nav/Protez'
 import Lechenie from '../containers/nav/Lechenie'
+import CollSenter from '../components/collSenter/CollSenter';
+import Button from '../Button1'
 
 function App(props) {
+  const [show, setShow] = useState(false)
   return (
     <>
       <AppContainers />
       <Routes>
         <Route path={'/'} element={<MainContainers />} />
-        <Route path={'/aboutClinic'} element={<AboutClinicContainer />} />
+        <Route path={'/aboutClinic'} element={<AboutClinicContainer setShow={setShow}/>} />
         <Route path={'/price'} element={<PriceContainer />} />
         <Route path={'/results'} element={<ResulttsContainer />} />
         <Route path={'/stuff'} element={<StuffContainer />} />
@@ -33,7 +36,7 @@ function App(props) {
         <Route path={'/chec_up'} element={<Chec_Up />} />
         <Route path={"/Vinery"} element={<Vinery />} />
         {/* <Route path={"/Elainery"} element={<Elainery />} /> */}
-        <Route path={'/Brekety'} element={<Brekety />} />
+        <Route path={'/Brekety'} element={<Brekety  setShow={setShow} />} />
         <Route path={'/whiting'} element={<Otbali />} />
         <Route path={'/Iplant'} element={<Iplant />} />
         {/* <Route path={'/Protez'} element={<Protez />} />
@@ -41,6 +44,7 @@ function App(props) {
         <Route path={'/Lechenie'} element={<Lechenie />} /> */}
 
       </Routes>
+      <CollSenter show={show} setShow={setShow}/>
       <Footer />
     </>
   );

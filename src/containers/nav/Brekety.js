@@ -5,8 +5,8 @@ import AutoVideo from '../../components/Vidoe/AutoVideo';
 import AOS from 'aos'
 import Accordion from '../../components/accrdion/Accordion';
 import imgg from  '../../img/imgg.jpeg'
-
-function Brekety(props) {
+import Button1 from '../../Button1';
+function Brekety({setShow}) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -86,9 +86,7 @@ function Brekety(props) {
                         <p className="mt-5" style={{ color: "white", fontSize: "20px" }}>
                             Исправление прикуса с помощью несъёмных<br /> ортодонтических конструкций. Эффективный<br /> способ борьбы с проблемой искривлённых<br /> зубов и неправильного прикуса.
                         </p>
-                        <div className='div_a mt-5'>
-                            <p > Записаться на консултацию </p>
-                        </div>
+                        
                     </Col>
                     <Col xs={12} md={6}>
                         <AutoVideo />
@@ -298,10 +296,7 @@ function Brekety(props) {
                    <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
                    С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
                    </Card.Text>
-                   <div className='div_a'>
-                      
-                        Записаться на консултацию 
-                   </div>
+                   <Button1 setShow={setShow}/>
                </Col> 
                <Col className='mt-5'>
                    <Card.Img className=" w-75" src='https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG'>

@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import { Modal,Form} from 'react-bootstrap';
 import axios from 'axios';
 function CollSenter(props) {
-  const [show, setShow] = useState(false);
+ 
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const token = "bot5271502598:AAG6wzuiEkLl2MTbKTMh8m6T-XAxQi0ZMdo";
 
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+
 
 const setTelegram = () => {
   axios.get(`https://api.telegram.org/${token}/sendMessage`, {
@@ -18,19 +17,18 @@ const setTelegram = () => {
           text:`<i>Name: </i> ${name} \n <i>Phone number: </i>${number} \n`,  
       }
   })
-  handleClose();
+  props.setShow(false)
 }
 
 
   return (
     <div>
-        <Modal show={show} 
-                       onHide={handleClose} 
+        <Modal show={props.show} 
                        size="md"
                        aria-labelledby="contained-modal-title-vcenter"
                         centered
                        >
-        <Modal.Header closeButton
+        <Modal.Header closeButton onClick={() => props.setShow(false)}
         style={{backgroundColor:"black", color:"white"}}>
           <Modal.Title>Запись на консультацию</Modal.Title>
         </Modal.Header>
