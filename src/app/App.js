@@ -37,6 +37,7 @@ function App(props) {
         <Route path={'/whiting'} element={<Otbali />} />
         <Route path={'/Iplant'} element={<Iplant />} />
         {/* <Route path={'/Protez'} element={<Protez />} />
+      
         <Route path={'/Lechenie'} element={<Lechenie />} /> */}
 
       </Routes>

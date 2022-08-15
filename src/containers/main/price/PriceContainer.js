@@ -115,6 +115,19 @@ function PriceContainer(props) {
                     подобрать удобное время для записи на консультацию.
                 </div>
             </div>
+            <div className='container '>
+                <h1 className='h'>
+                    Запишитесь на бесплатный чекап полости рта.</h1>
+                <h1 className='h mt-2'>
+                    Экономия 25 тысяч*.
+                </h1>
+                <div className='h mt-5'>
+                    Оставьте контакты, и мы свяжемся с вами, чтобы
+                </div>
+                <div className='h mt-2'>
+                    подобрать удобное время для записи на консультацию.
+                </div>
+            </div>
             <RunText/>
         </div>
     );
