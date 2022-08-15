@@ -13,7 +13,8 @@ function AppContainers(props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav bg="dark">
-              <Nav.Link href="/aboutClinic" className='nav_text bg-dark' bg="dark">О Клинике</Nav.Link>
+              <Nav.Link href="/aboutClinic" className='nav_text bg-dark' bg="dark"
+              >О Клинике</Nav.Link>
               <NavDropdown bg="dark" title="Услуги" id="basic-nav-dropdown" className='nav_text'>
                 <NavDropdown.Item href="/Chec_Up">Чекап</NavDropdown.Item>
                 <NavDropdown.Item href="/Vinery">Винеры</NavDropdown.Item>

@@ -15,7 +15,8 @@ function ResulttsContainer(props) {
                                 <Link to={'/'} className="div_a">
                                     Перейти на главную
 
-                                </Link>                            </div>
+                                </Link>
+                            </div>
                         </Col>
 
                         <Col xs={12} md={6}>
