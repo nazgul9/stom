@@ -12,17 +12,19 @@ function AppContainers(props) {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav>
-              <Nav.Link href="/aboutClinic" className='nav_text'>О Клинике</Nav.Link>
-              <NavDropdown title="Услуги" id="basic-nav-dropdown" className='nav_text'>
+            <Nav bg="dark">
+              <Nav.Link href="/aboutClinic" className='nav_text bg-dark' bg="dark"
+              >О Клинике</Nav.Link>
+              <NavDropdown bg="dark" title="Услуги" id="basic-nav-dropdown" className='nav_text'>
                 <NavDropdown.Item href="/Chec_Up">Чекап</NavDropdown.Item>
                 <NavDropdown.Item href="/Vinery">Винеры</NavDropdown.Item>
-                <NavDropdown.Item href="/Elainery">Элайнеры</NavDropdown.Item>
+                {/* <NavDropdown.Item href="/Elainery">Элайнеры</NavDropdown.Item> */}
                 <NavDropdown.Item href="/Brekety">Брекеты</NavDropdown.Item>
                 <NavDropdown.Item href="/whiting">Отбеливание</NavDropdown.Item>
                 <NavDropdown.Item href="/Iplant">Имплантация</NavDropdown.Item>
                 <NavDropdown.Item href="/Protez">Протезирования</NavDropdown.Item>
                 <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item>
+
               </NavDropdown>
               <Nav.Link href="price" className='nav_text'>Прайс</Nav.Link>
               <Nav.Link href="stuff" className='nav_text'>Врачи</Nav.Link>
