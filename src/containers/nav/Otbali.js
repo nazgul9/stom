@@ -137,7 +137,7 @@ function Otbali(props) {
             <div className="container">
 
                 <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
-                    Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* сом.
+                    Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* .
                 </p>
                 <p style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', fontSize: "25px" }}>Оставьте контакты, и мы свяжемся с вами, чтобы <br />подобрать удобное время для записи на консультацию.</p>
                 <span className='div_a '>Записаться на консултацию</span>
