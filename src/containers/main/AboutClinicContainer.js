@@ -6,9 +6,10 @@ import StuffContainer from '../../containers/main/StuffContainer'
 import RunText from '../../components/runText/RunText';
 import AOS from "aos";
 import imgg from '../../img/imgg.jpeg'
+import Button1 from '../../Button1';
 
 
-function AboutClinicContainer(props) {
+function AboutClinicContainer({setShow}) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -48,8 +49,8 @@ function AboutClinicContainer(props) {
                                 Профессионализм. Забота о каждом пациенте.</p>
 
                             <div className='div_a mt-4'>
-                                {/* <CollSenter/> */}
-                                <p>Запись на консультацию</p>
+                            <Button1 setShow={setShow}/>
+
                             </div>
                         </Col>
                         
