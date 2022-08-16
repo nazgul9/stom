@@ -6,8 +6,9 @@ import CollSenter from '../../components/collSenter/CollSenter';
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import StuffContainer from '../../containers/main/StuffContainer'
 import imgg from '../../img/imgg.jpeg'
+import Button1 from '../../Button1'
 
-function Vinery(props) {
+function Vinery() {
     const [openComponent, setOpenComponent] = useState(false)
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -27,12 +28,7 @@ function Vinery(props) {
                     <Card.Text style={{ color: "white", fontSize: "20px" }}>
                         С помощью передовых методик создаём белоснежную улыбку, которой хочется делиться с окружающими
                     </Card.Text>
-                    <div className='div_a'>
-                        {
-                            openComponent === true ? <CollSenter /> : ''
-                        }
-                        <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
-                    </div>
+                   <Button1/>
                 </Col>
                 <Col className='mt-5'>
                     <AutoVideo />
