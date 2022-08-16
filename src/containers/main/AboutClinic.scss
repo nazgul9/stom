@@ -26,11 +26,10 @@
         height: 50px;
         color: #060608;
         font-size: 14px;
-        font-family: 'GraphikTT', Arial, sans-serif;
         text-align: center;
         justify-content: center;
         border-width: 2px;
-        border-radius: 0px;
+        border-radius: 0;
         background-color: #d3bb7e;
         background-position: center center;
         position: center;
@@ -92,17 +91,17 @@
         justify-content: center;
         align-items: center;
       }
-      
+
       .overlay-after {
         background-color: rgba(0, 0, 0, 0.8);
         opacity: 1;
       }
-      
+
       .overlay-before {
         background-color: rgba(0, 0, 0, 0);
         opacity: 0;
       }
-      
+
       .content-base {
         position: relative;
         /*
@@ -124,17 +123,17 @@
         transition-duration: 500ms;
         transition-timing-function: ease-in-out;
       }
-      
+
       .content-after {
         width: 70%;
         height: 40%;
         background-color: rgba(250, 190, 190, 0.8);
       }
-      
+
       .content-before {
         width: 0%;
         height: 0%;
         background-color: transparent;
       }
-      
+
 }

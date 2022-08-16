@@ -12,7 +12,7 @@
 
 .black{
 background-color: white;
- 
+
 }
 
 
@@ -21,7 +21,10 @@ $accordion-button-active-bg: black;
 $accordion-color: white;
 $accordion-button-active-color: #d3bb7e;
 $accordion-icon-color:    white;
-$accordion-border-color: #d3bb7e;     
+$accordion-border-color: #d3bb7e;
+
+$font-family-base: 'Philosopher', sans-serif;
+$font-family-sans-serif: 'Philosopher', sans-serif;
 
 
-@import "~bootstrap/scss/bootstrap"; 
+@import "~bootstrap/scss/bootstrap";
