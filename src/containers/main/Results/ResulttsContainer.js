@@ -11,8 +11,7 @@ function ResulttsContainer(props) {
                     <span className='h1 mt-3'>Страница находится<br />в разработке</span>
                     <Row>
                         
-                            <Col  md={6} xs={10}>
-                                <Link to={'/'} className="div_a">
+                            <Col  sm={3}>                                <Link to={'/'} className="div_a">
                                     Перейти на главную
 
                                 </Link>

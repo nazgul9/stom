@@ -73,9 +73,12 @@ const data = [
 function PriceContainer(props) {
     return (
         <div className={'priceContainer'}>
+          
             <div className='container_price container'>
                 <h1 className='price'>Прайс</h1>
             </div>
+            
+           
 
             <div className=' container mt-5'>
                 <Row>

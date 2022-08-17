@@ -27,8 +27,8 @@ function AppContainers(props) {
                 <NavDropdown.Item href="/Brekety">Брекеты</NavDropdown.Item>
                 <NavDropdown.Item href="/whiting">Отбеливание</NavDropdown.Item>
                 <NavDropdown.Item href="/Iplant">Имплантация</NavDropdown.Item>
-                <NavDropdown.Item href="/Protez">Протезирования</NavDropdown.Item>
-                <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item>
+                {/* <NavDropdown.Item href="/Protez">Протезирования</NavDropdown.Item>
+                <NavDropdown.Item href="/Lechenie">Лечениие</NavDropdown.Item> */}
 
               </NavDropdown>
               <Nav.Link href="price" className="nav_text">Прайс</Nav.Link>
@@ -39,7 +39,7 @@ function AppContainers(props) {
 
             </Nav>
           </Navbar.Collapse>
-          <a href={'tel:+996776000000'} className={'p-2 rounded'} style={{
+          <a href={'tel:+996776245758'} className={'p-2 rounded'} style={{
             color: 'white',
             backgroundColor: '#c2b285',
             width: '270px',
@@ -48,7 +48,7 @@ function AppContainers(props) {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-            +996 (776) 000 000
+            +996 (776) 245 758
           </a>
         </Container>
       </Navbar>

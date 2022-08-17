@@ -184,8 +184,10 @@ function MainContainers({setShow}) {
               Превратите её в свою визитную карточку, как это уже сделали многие звёзды, певцы, спортсмены, политики и
               предприниматели
             </Card.Text>
-            <Button1 setShow={setShow}/>
+                <Col sm={6}>
+                <Button1 setShow={setShow}/>
 
+                </Col>
           </Col>
           <Col md={6} xs={10}>
             <Card md={6} xs={8} style={{backgroundColor: 'black'}}>

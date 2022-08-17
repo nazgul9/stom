@@ -3,13 +3,13 @@ import { Col, Container, Row, Card, Modal, } from 'react-bootstrap';
 import Button1 from '../../Button1';
 import CollSenter from '../../components/collSenter/CollSenter';
 import imgg from '../../img/imgg.jpeg'
-
-function StuffContainer() {
+import komanda from '../Image/komanda.jpg'
+function StuffContainer({setShow}) {
 
     const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const [shows, setShows] = useState(false);
+    const handleClose = () => setShows(false);
+    const handleShow = () => setShows(true);
 
     const doctors = [
         {
@@ -80,10 +80,11 @@ function StuffContainer() {
                         <Card.Text style={{ color: "white", fontSize: "20px" }}>
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
                         </Card.Text>
-                        <Button1 />
+                      <Col sm={6} className="mt-5">
+                      <Button1 setShow={setShow}/></Col>
                     </Col>
-                    <Col className='mt-5'>
-                        <Card.Img src='https://static.tildacdn.com/tild3331-3833-4964-b366-656665383262/photo.svg'>
+                    <Col >
+                        <Card.Img src={komanda}>
 
                         </Card.Img>
                     </Col>
@@ -110,15 +111,19 @@ function StuffContainer() {
                             Звезды шоу-бизнеса, спорта, популярные блогеры доверили свои улыбки именно доктору Эльмару и стали обладателями ослепительных улыбок.
                         </p >
                         <Row>
-                            <Col >
+                            <Col>
+                            
                                 <div className='div_b'>
                                     Образование
                                 </div>
                             </Col>
                             <Col className=''>
+                                <a href='https://instagram.com/dr.aidarov?igshid=YmMyMTA2M2Y='>
                                 <div className='div_b '>
                                     Социальные сети
                                 </div>
+                                </a>
+                              
                             </Col>
                         </Row>
                     </Col>
@@ -132,14 +137,12 @@ function StuffContainer() {
                                     <Card.Text style={{ color: "white", textAlign: "center" }}> {e.title}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.position}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.experience}</Card.Text>
-                                    <div className='div_b text-center' >
-                                        <p> Записаться на прием </p>
-                                    </div>
+                                  <Button1 setShow={setShow}/>
                                 </Col>
                             </>
                         )
                     })}
-                    <Modal show={show} fullscreen={fullscreen} onHide={handleClose} >
+                    <Modal shows={shows} fullscreen={fullscreen} onHide={handleClose} >
                         <Modal.Header closeButton style={{ backgroundColor: "black", color: "white" }}>
                             <Modal.Title >Гасанова Шахризат Магомедовна </Modal.Title>
                         </Modal.Header>

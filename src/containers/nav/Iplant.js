@@ -159,8 +159,11 @@ function Iplant({setShow}) {
                 <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч*.
                 </p>
-                <Button1 setShow={setShow}/>
-                <p className="mb-5" style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
+
+<Col sm={3}>
+<Button1 setShow={setShow}/>
+
+</Col>                <p className="mb-5" style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
                 <p className="mt-5 text-center" style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Какие проблемы решает имплантация зубов?
                 </p>

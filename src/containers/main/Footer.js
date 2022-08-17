@@ -1,7 +1,8 @@
 import React from 'react'
 import image from '../Image/doctor.jpg'
+import Button1 from './../../Button1';
 
-function Footer() {
+function Footer({setShow}) {
   return (
     <>
       <div className="main-footer mt-5" style={{
@@ -47,13 +48,13 @@ function Footer() {
             </div>
             {/* colum3 */}
             <div className="col">
-              <div className="textinfooter">Услуги</div>
+              <div className="textinfooter">Адресс</div>
               <div className="textinfooter2">г. Ош, ст. Фрунзенская,</div>
               <div className="textinfooter2">Оболенский переулок, д. 9, корп. 8</div>
               <a href={'tel:+996776000000'} className={'p-2 textinfooter2 rounded'}>
                 +996 (776) 000 000
               </a>
-              <div className="div_a"><p> Записаться на прием</p></div>
+            <Button1 setShow={setShow}/>
             </div>
           </div>
           <div className="col">

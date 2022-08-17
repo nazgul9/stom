@@ -27,13 +27,14 @@ function CollSenter(props) {
 
   return (
     <div>
-      <Modal show={props.show}
-        onHide={handleClose}
+      <Modal 
+        show={props.show}
+        onClick={handleClose}
         size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton onClick={() => props.setShow(false)}
+        <Modal.Header  onClick={() => props.setShow(false)}
           style={{ backgroundColor: "black", color: "white" }}>
           <Modal.Title>Запись на консультацию</Modal.Title>
         </Modal.Header>

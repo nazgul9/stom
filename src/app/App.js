@@ -43,7 +43,7 @@ function App(props) {
 
       </Routes>
       <CollSenter show={show} setShow={setShow}/>
-      <Footer />
+      <Footer setShow={setShow} />
     </>
   );
 }
