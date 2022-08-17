@@ -5,8 +5,9 @@ import AutoVideo from '../../components/Vidoe/AutoVideo';
 import AOS from 'aos'
 import Accordion from '../../components/accrdion/Accordion';
 import imgg from  '../../img/imgg.jpeg'
+import Button1 from '../../Button1';
 
-function Brekety(props) {
+function Brekety({setShow}) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -86,9 +87,7 @@ function Brekety(props) {
                         <p className="mt-5" style={{ color: "white", fontSize: "20px" }}>
                             Исправление прикуса с помощью несъёмных<br /> ортодонтических конструкций. Эффективный<br /> способ борьбы с проблемой искривлённых<br /> зубов и неправильного прикуса.
                         </p>
-                        <div className='div_a mt-5'>
-                            <p > Записаться на консултацию </p>
-                        </div>
+                        <Button1 setShow={setShow}/>
                     </Col>
                     <Col xs={12} md={6}>
                         <AutoVideo />
@@ -107,7 +106,7 @@ function Brekety(props) {
                     {patients.map(e => {
                         return (
                             <>
-                                <Col md={4} xs={6}>
+                                <Col md={4} sm={6} xs={12}>
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
                                         <Card.Title className="mt-3" style={{ color: "white", }}>{e.title}</Card.Title>
@@ -148,7 +147,7 @@ function Brekety(props) {
                         <Card.Img className="h-100 w-100" src='https://thumb.tildacdn.com/tild6663-6334-4062-b764-356234363039/-/format/webp/diagnostika-min.jpg'>
                         </Card.Img>
                     </Col>
-                    <Col md={6} className={"m-5"}>
+                    <Col md={6} >
                         <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", }}>
                             Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
                         </Card.Text>
@@ -161,7 +160,8 @@ function Brekety(props) {
                     <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                         Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* .
                     </p>
-                    <span className='div_a '>Записаться на консултацию</span>
+                    <Button1 setShow={setShow}/>
+
                     <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
                 </div>
             </div>
@@ -293,28 +293,19 @@ function Brekety(props) {
                    </Card.Text>
                 <Row>
                
-               <Col md={6} className={"m-5"}>
+               <Col md={6} >
                    
                    <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
                    С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
                    </Card.Text>
-                   <div className='div_a'>
-                      
-                        Записаться на консултацию 
-                   </div>
+                   <Button1 setShow={setShow}/>
                </Col> 
                <Col className='mt-5'>
                    <Card.Img className=" w-75" src='https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG'>
                    </Card.Img>
-
                </Col>
            </Row>
-
-
             </div>
-
-
-
         </>
     );
 }

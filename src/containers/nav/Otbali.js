@@ -5,13 +5,14 @@ import AOS from 'aos'
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import Accordion from '../../components/accrdion/Accordion';
 import imgg from '../../img/imgg.jpeg'
+import Button1 from '../../Button1';
 
-function Otbali(props) {
+function Otbali({setShow}) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
-  
+
     const patients = [
         {
             img: "https://thumb.tildacdn.com/tild3534-3033-4632-b064-356232633331/-/cover/720x1100/center/center/-/format/webp/G_98zN2SdVE.jpg",
@@ -67,9 +68,8 @@ function Otbali(props) {
                         </p>
                     </Col>
                     <Col xs={12} md={6}>
-                        <div className='div_a mt-5'>
-                            <p> Записаться на консултацию </p>
-                        </div>
+                       
+                        <Button1 setShow={setShow} />
                     </Col>
                 </Row>
             </div>
@@ -84,7 +84,7 @@ function Otbali(props) {
                     {patients.map(e => {
                         return (
                             <>
-                                <Col md={4} xs={6}>
+                                <Col md={4} sm={6} xs={12}>
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
                                         <Card.Title className="mt-3" style={{ color: "white", }}>{e.title}</Card.Title>
@@ -124,7 +124,7 @@ function Otbali(props) {
                         <Card.Img className="h-100 w-100" src='https://thumb.tildacdn.com/tild6663-6334-4062-b764-356234363039/-/format/webp/diagnostika-min.jpg'>
                         </Card.Img>
                     </Col>
-                    <Col md={6} className={"m-5"}>
+                    <Col md={6}>
                         <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", }}>
                             Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
                         </Card.Text>
@@ -140,7 +140,7 @@ function Otbali(props) {
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* .
                 </p>
                 <p style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', fontSize: "25px" }}>Оставьте контакты, и мы свяжемся с вами, чтобы <br />подобрать удобное время для записи на консультацию.</p>
-                <span className='div_a '>Записаться на консултацию</span>
+                <Button1 setShow={setShow}/>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "20px" }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
             </div>
             <div className="container">
@@ -159,12 +159,12 @@ function Otbali(props) {
                 </Row>
             </div>
             <div className="container text-center">
-                <Card.Text  style={{ color: "white", fontSize: "40px", }}>
+                <Card.Text style={{ color: "white", fontSize: "40px", }}>
                     Какую систему отбеливания выбрать?
                 </Card.Text>
                 <Accordion name={datas} />
-                <Card.Text  style={{ color: "#d3bb7e", fontSize: "40px", }}>
-                5 шагов до улыбки мечты
+                <Card.Text style={{ color: "#d3bb7e", fontSize: "40px", }}>
+                    5 шагов до улыбки мечты
                 </Card.Text>
                 <Table striped bordered hover>
                     <thead>
@@ -194,7 +194,7 @@ function Otbali(props) {
                     </tbody>
                 </Table>
             </div>
-<RunText/>
+            <RunText />
         </>
 
     );

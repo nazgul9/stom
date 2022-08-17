@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, Col, Row, Table } from 'react-bootstrap';
+import Button1 from '../../Button1';
 import Accordion from '../../components/accrdion/Accordion';
 import RunText from '../../components/runText/RunText';
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import imgg from '../../img/imgg.jpeg'
-function Iplant(props) {
+function Iplant({setShow}) {
     const patients = [
         {
             img: "https://thumb.tildacdn.com/tild3534-3033-4632-b064-356232633331/-/cover/720x1100/center/center/-/format/webp/G_98zN2SdVE.jpg",
@@ -88,9 +89,8 @@ function Iplant(props) {
                         <Card.Text style={{ color: "#d3bb7e", fontSize: "20px" }}>
                             Всё это позволяет вернуть нашим<br /> пациентам здоровье и красоту зубов.
                         </Card.Text>
-                        <div className='div_a'>
-                            <> Записаться на консултацию </>
-                        </div>
+                        <Button1 setShow={setShow}/>
+
                     </Col>
                     <Col className='mt-5'>
                         <AutoVideo />
@@ -108,7 +108,7 @@ function Iplant(props) {
                     {patients.map(e => {
                         return (
                             <>
-                                <Col md={4} xs={6}>
+                                <Col md={4} sm={6} xs={12}>
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
                                         <Card.Title class="mt-3 h4" style={{ color: "white", }}>{e.title}</Card.Title>
@@ -145,7 +145,7 @@ function Iplant(props) {
                         <Card.Img className="h-100 w-100" src='https://thumb.tildacdn.com/tild6663-6334-4062-b764-356234363039/-/format/webp/diagnostika-min.jpg'>
                         </Card.Img>
                     </Col>
-                    <Col md={6} className={"m-5"}>
+                    <Col md={6} >
                         <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", }}>
                             Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
                         </Card.Text>
@@ -159,7 +159,7 @@ function Iplant(props) {
                 <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч*.
                 </p>
-                <span className='div_a '>Записаться на консултацию</span>
+                <Button1 setShow={setShow}/>
                 <p className="mb-5" style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
                 <p className="mt-5 text-center" style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Какие проблемы решает имплантация зубов?
@@ -205,7 +205,6 @@ function Iplant(props) {
                 <p style={{ color: "#d3bb7e", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Выбор способа зависит от клинической ситуации пациента
                 </p>
-
                 <Row style={{ textAlign: "center" }}>
                     <Col md={6} className="mt-3">
                 <div style={{
@@ -221,8 +220,7 @@ function Iplant(props) {
                     </Col>
                     <Col md={6} className="mt-3">
                     <div style={{
-                        width: 'auto', textAlign: "center", border: '2px solid #d3bb7e',
-                        
+                        width: 'auto', textAlign: "center", border: '2px solid #d3bb7e', 
                     }}>
                         <Card.Body>
                             <Card.Title style={{ color: "#d3bb7e", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>ОДНОМОМЕНТНЫЙ</Card.Title>
@@ -240,7 +238,6 @@ function Iplant(props) {
                 Частые вопросы
                 </p>
                 <Accordion name={data1}/>
-           
                 </div>
                 <RunText/>
 

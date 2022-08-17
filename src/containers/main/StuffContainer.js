@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Card, Modal, } from 'react-bootstrap';
+import Button1 from '../../Button1';
 import CollSenter from '../../components/collSenter/CollSenter';
 import imgg from '../../img/imgg.jpeg'
 
-function StuffContainer(props) {
+function StuffContainer() {
 
-    const [openComponent, setOpenComponent] = useState(false)
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-
 
     const doctors = [
         {
@@ -73,23 +71,16 @@ function StuffContainer(props) {
 
     return (
         <>
-
-
             <Container>
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Врачи, которым доверяют
                 </p>
                 <Row>
-                    <Col md={6} className={"m-5"}>
-
-
+                    <Col md={6} >
                         <Card.Text style={{ color: "white", fontSize: "20px" }}>
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
                         </Card.Text>
-                        <div className='div_a'>
-                                    <CollSenter/>
-                        </div>
-
+                        <Button1 />
                     </Col>
                     <Col className='mt-5'>
                         <Card.Img src='https://static.tildacdn.com/tild3331-3833-4964-b366-656665383262/photo.svg'>
@@ -100,9 +91,7 @@ function StuffContainer(props) {
                         <h1 style={{ color: "#d3bb7e" }}>Наша команда</h1>
                     </Col>
                     <Col md={6} >
-
                         <Card.Img className='w-75 h-100 mt-3' src={imgg}>
-
                         </Card.Img>
                     </Col>
                     <Col md={6} className='mt-5'>
@@ -120,48 +109,39 @@ function StuffContainer(props) {
                         <p className='textdoctor'>
                             Звезды шоу-бизнеса, спорта, популярные блогеры доверили свои улыбки именно доктору Эльмару и стали обладателями ослепительных улыбок.
                         </p >
-                        <div style={{ display: "flex", justifyContent: "between", color: "black" }}>
-                            <div className='div_a'>
-                                Записаться на консултацию
-                            </div>
-                            <div className='div_b'>
-                                Образование
-                            </div>
-                            <div className='div_b'>
-                                Социальные сети
-                            </div>
-                        </div>
+                        <Row>
+                            <Col >
+                                <div className='div_b'>
+                                    Образование
+                                </div>
+                            </Col>
+                            <Col className=''>
+                                <div className='div_b '>
+                                    Социальные сети
+                                </div>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
-
                 <Row className='mt-5'>
                     {doctors.map(e => {
                         return (
                             <>
-                                <Col md={3} xs={6} className="mt-5">
-
-
+                                <Col md={3} sm={6} xs={12} className="mt-5">
                                     <Card.Img src={e.img}></Card.Img>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}> {e.title}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.position}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.experience}</Card.Text>
-                                 Z
-                                    <div className='div_b'  >
+                                    <div className='div_b text-center' >
                                         <p> Записаться на прием </p>
                                     </div>
-
                                 </Col>
                             </>
-
-
-
                         )
                     })}
-
                     <Modal show={show} fullscreen={fullscreen} onHide={handleClose} >
                         <Modal.Header closeButton style={{ backgroundColor: "black", color: "white" }}>
                             <Modal.Title >Гасанова Шахризат Магомедовна </Modal.Title>
-
                         </Modal.Header>
                         <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
                             <Container>
@@ -178,9 +158,7 @@ function StuffContainer(props) {
 
                         </Modal.Body>
                     </Modal>
-
                 </Row>
-
                 <Row className='mt-5'>
                     <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                         Наши пациенты
@@ -188,7 +166,7 @@ function StuffContainer(props) {
                     {patients.map(e => {
                         return (
                             <>
-                                <Col md={4} xs={6}>
+                                <Col md={4} sm={6} xs={12} >
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
                                         <Card.Text style={{ color: "white", textAlign: "center" }}>{e.title}</Card.Text>
@@ -198,11 +176,7 @@ function StuffContainer(props) {
                             </>
                         )
                     })}
-
                 </Row>
-
-
-
             </Container>
         </>
     );
