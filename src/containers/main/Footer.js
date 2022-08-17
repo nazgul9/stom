@@ -19,8 +19,8 @@ function Footer() {
             <div className="col">
               <h5 className="textinfooter">
                 <img
-                  style={{width: '80px', height: '80px', borderRadius: '50%'}}
-                  src={image}/> Dr.Aidarov
+                  style={{ width: '80px', height: '80px', borderRadius: '50%' }}
+                  src={image} /> Dr.Aidarov
               </h5>
               <p className="textdoctor">Медицинская лицензия</p>
             </div>
@@ -50,13 +50,15 @@ function Footer() {
               <div className="textinfooter">Услуги</div>
               <div className="textinfooter2">г. Ош, ст. Фрунзенская,</div>
               <div className="textinfooter2">Оболенский переулок, д. 9, корп. 8</div>
-              <div className="textinfooter2">+996(555)555 555</div>
+              <a href={'tel:+996776000000'} className={'p-2 textinfooter2 rounded'}>
+                +996 (776) 000 000
+              </a>
               <div className="div_a"><p> Записаться на прием</p></div>
             </div>
           </div>
           <div className="col">
-            <hr/>
-            <p style={{textAlign: 'center', padding: '2px', fontSize: '15px'}}>&copy; {new Date().getFullYear()} г.</p>
+            <hr />
+            <p style={{ textAlign: 'center', padding: '2px', fontSize: '15px' }}>&copy; {new Date().getFullYear()} г.</p>
           </div>
         </div>
       </div>

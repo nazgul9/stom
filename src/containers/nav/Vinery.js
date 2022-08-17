@@ -8,10 +8,10 @@ import StuffContainer from '../../containers/main/StuffContainer'
 import imgg from '../../img/imgg.jpeg'
 import Button1 from '../../Button1'
 
-function Vinery() {
+
+function Vinery({setShow}) {
     const [openComponent, setOpenComponent] = useState(false)
     const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -24,11 +24,11 @@ function Vinery() {
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Получите улыбку как у звёзд благодаря сверхтонким винирам от доктора Эльмара
                 </p>
-                <Col md={6} className={"m-5"}>
+                <Col md={6} >
                     <Card.Text style={{ color: "white", fontSize: "20px" }}>
                         С помощью передовых методик создаём белоснежную улыбку, которой хочется делиться с окружающими
                     </Card.Text>
-                   <Button1/>
+                   <Button1 setShow={setShow}/>
                 </Col>
                 <Col className='mt-5'>
                     <AutoVideo />
@@ -63,7 +63,7 @@ function Vinery() {
                     <Card.Img className="h-100 w-100" src='https://thumb.tildacdn.com/tild6663-6334-4062-b764-356234363039/-/format/webp/diagnostika-min.jpg'>
                     </Card.Img>
                 </Col>
-                <Col md={6} className={"m-5"}>
+                <Col md={6} >
                     <Card.Text style={{ color: "#d3bb7e", fontSize: "35px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                         Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
                     </Card.Text>
@@ -78,12 +78,7 @@ function Vinery() {
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* руб.
                 </p>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
-                <div className='div_a'>
-                    {
-                        openComponent === true ? <CollSenter /> : ''
-                    }
-                    <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
-                </div>
+                <Button1 setShow={setShow}/>
             </div>
             <div className="container">
                 <p style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
@@ -91,19 +86,14 @@ function Vinery() {
                 </p>
                 <Row>
                
-                <Col md={6} className={"m-5"}>
+                <Col md={6} >
                     <Card.Text style={{ color: "#d3bb7e", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     В стоматологической клинике «Лаборатории улыбок Dr. Elmar» проводится первичная консультация для оценки состояния зубов и дёсен с помощью сверхточного рентгеновского аппарата Sirona ORTHOPHOS XG, который обеспечивает высокое качество снимков при минимальной дозе облучения.
                     </Card.Text>
                     <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
                     С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
                     </Card.Text>
-                    <div className='div_a'>
-                        {
-                            openComponent === true ? <CollSenter /> : ''
-                        }
-                        <p onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
-                    </div>
+                  <Button1 setShow={setShow}/>
                 </Col> 
                 <Col className='mt-5'>
                     <Card.Img className=" w-75" src='https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG'>

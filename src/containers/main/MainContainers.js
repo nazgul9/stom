@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import {Col, Container, Row, Card, Carousel} from 'react-bootstrap'
-import CollSenter from '../../components/collSenter/CollSenter'
 import RunText from '../../components/runText/RunText'
 import aidarov from '../Image/Aidarov.png'
 import aidarov2 from '../Image/aidarov2.jpg'
@@ -23,9 +22,9 @@ import result33 from '../Image/result33.jpg'
 import result31 from '../Image/result31.jpg'
 import konsultasya from '../Image/konsultasya.png'
 import Accordion from 'react-bootstrap/Accordion'
+import Button1 from '../../Button1'
 
-function MainContainers() {
-  const [openComponent, setOpenComponent] = useState(false)
+function MainContainers({setShow}) {
 
   const feedback = [
     {
@@ -185,14 +184,10 @@ function MainContainers() {
               Превратите её в свою визитную карточку, как это уже сделали многие звёзды, певцы, спортсмены, политики и
               предприниматели
             </Card.Text>
-            <div className="div_a mt-5">
-              {
-                openComponent === true ? <CollSenter/> : ''
-              }
-              <p className="div_a" onClick={() => setOpenComponent(true)}> Записаться на консултацию </p>
-            </div>
+            <Button1 setShow={setShow}/>
+
           </Col>
-          <Col md={6} xs={8}>
+          <Col md={6} xs={10}>
             <Card md={6} xs={8} style={{backgroundColor: 'black'}}>
               <img src={aidarov2}/>
             </Card>
@@ -234,9 +229,8 @@ function MainContainers() {
                 Добро пожаловать в клинику «Dr. Aidarov»!
               </h5>
               <div style={{display: 'flex', justifyContent: 'between', color: 'black', marginTop: '50px'}}>
-                <div className="div_a">
-                  Записаться на консултацию
-                </div>
+              <Button1 setShow={setShow}/>
+
                 <div className="div_b">
                   Образование
                 </div>
@@ -253,7 +247,7 @@ function MainContainers() {
             </p>
           </Col>
 
-          <Row className="mt-5 justify-content-center">
+          <Row className="mt-5 ">
 
             <Col md={4} xs={10}>
               <Card md={4} xs={10}>
@@ -277,7 +271,7 @@ function MainContainers() {
           <Row className="mt-5">
             <Col xs={10} md={4} className="mt-5">
               <div className="justify-content-evenly text-center  ">
-                <img class=" t013__img t-img" src={aidarov4} imgfield="img" data-tu-max-width="320"
+                <img class="  t013__img t-img" src={aidarov4} imgfield="img" data-tu-max-width="320"
                      data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                 </img>
                 <Card.Title className="text_nav">Бекмамат Айдаров</Card.Title>
@@ -299,24 +293,27 @@ function MainContainers() {
             </Col>
           </Row>
 
+          
+          <Row>
           <h1
-            style={{color: '#d3bb7e', fontSize: '50px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
+            style={{color: '#d3bb7e', fontSize: '45px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
             Чем мы можем вам помочь
           </h1>
-          <Row>
             <Col lg={6} xs={12}>
+           
               <a href="/Chec_Up" style={{textDecoration: 'none'}}>
                 <div className="help">
                   <h4>
                     Провести консультацию
                   </h4>
+                  <br/>
                   <h5>
                     <a>Первичная консултация</a>
                     <br/>
                     <a>Chec_Up улыбки</a>
                   </h5>
                   <h5>
-                    <img style={{width: '80px', height: '80px'}} src={strelka}/>
+                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
                   </h5>
                 </div>
               </a>
@@ -324,11 +321,10 @@ function MainContainers() {
             <Col lg={6} xs={12}>
               <a href="/Chec_Up" style={{textDecoration: 'none'}}>
                 <div className="help">
-                  <h4>
                     <h4> Обрести красивую и</h4>
                     <b/>
                     <h4>здоровую улыбку</h4>
-                  </h4>
+
 
                   <h5>
                     <a>Виниры</a>
@@ -338,7 +334,7 @@ function MainContainers() {
                     <a> Элайнеры </a>
                   </h5>
                   <h5>
-                    <img style={{width: '80px', height: '80px'}} src={strelka}/>
+                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
                   </h5>
                 </div>
               </a>
@@ -357,7 +353,7 @@ function MainContainers() {
 
                   </h5>
                   <h5>
-                    <img style={{width: '80px', height: '80px'}} src={strelka}/>
+                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
                   </h5>
                 </div>
               </a>
@@ -382,7 +378,7 @@ function MainContainers() {
                     <a> отбеливание</a>
                   </h5>
                   <h5>
-                    <img style={{width: '80px', height: '80px'}} src={strelka}/>
+                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
                   </h5>
                 </div>
               </a>
@@ -399,7 +395,7 @@ function MainContainers() {
                     <a>Протезирования</a>
                   </h5>
                   <h5>
-                    <img style={{width: '80px', height: '80px'}} src={strelka}/>
+                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
                   </h5>
                 </div>
               </a>
@@ -419,7 +415,7 @@ function MainContainers() {
                     <br/>
                   </h5>
                   <h5>
-                    <img style={{width: '80px', height: '80px'}} src={strelka}/>
+                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
                   </h5>
                 </div>
               </a>
@@ -478,8 +474,6 @@ function MainContainers() {
             </p>
           </Col>
           <Row className="justify-content-center">
-
-
             <Col md={10} xs={10} className="mt-5">
               <Carousel fade>
                 {

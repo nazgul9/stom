@@ -6,9 +6,10 @@ import RunText from '../../components/runText/RunText'
 import Accordion from '../../components/accrdion/Accordion'
 import imgg from '../../img/imgg.jpeg'
 import AOS from 'aos'
+import Button1 from '../../Button1';
 
 
-function Chec_Up(props) {
+function Chec_Up({ setShow }) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -62,13 +63,11 @@ function Chec_Up(props) {
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Полный чекап. Пошаговый план до улыбки мечты
                 </p>
-                <Col md={6} className={"m-5"}>
+                <Col md={6} xs={10}>
                     <Card.Text style={{ color: "white", fontSize: "20px" }}>
                         Комплексная проверка состояния полости рта. Разработка этапов лечения. Консилиум опытных врачей клиники для составления персонального плана по созданию идеально ровной и красивой улыбки.
                     </Card.Text>
-                    <div className='div_a'>
-                        <> Записаться на консултацию </>
-                    </div>
+                    <Button1 setShow={setShow} />
                 </Col>
                 <Col className='mt-5'>
                     <AutoVideo name={data} />
@@ -84,7 +83,7 @@ function Chec_Up(props) {
                     {patients.map(e => {
                         return (
                             <>
-                                <Col md={4} xs={6}>
+                                <Col md={4} sm={6} xs={12}>
                                     <div>
                                         <Card.Img src={e.img}></Card.Img>
                                         <Card.Title class="mt-3 h4" style={{ color: "white", }}>{e.title}</Card.Title>
@@ -120,10 +119,11 @@ function Chec_Up(props) {
             <div className="container">
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* современное.
-                    <div className='div_a'>
-                        <> Записаться на консултацию </>
-                    </div>
                 </p>
+                <Col sm={6}>
+                    <Button1 setShow={setShow} />
+
+                </Col>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
             </div>
             <div className="container">
@@ -144,7 +144,7 @@ function Chec_Up(props) {
                     <Card.Img src='https://thumb.tildacdn.com/tild6634-3836-4936-a564-373436383964/-/format/webp/IMG_1360.JPG'>
                     </Card.Img>
                 </Col>
-                <Col md={6} className={"m-5"}>
+                <Col md={6} >
                     <Card.Text style={{ color: "#d3bb7e", fontSize: "40px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                         Чекап включает в себя:
                     </Card.Text>
@@ -163,12 +163,9 @@ function Chec_Up(props) {
                     <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
                         создание цифровых слепков нижней и верхней челюстей
                     </Card.Text>
-                    <div className='div_a'>
-                        
-                        <p> Записаться на консултацию </p>
-                    </div>
-
-                </Col>
+                    <Col sm={6}>
+                        <Button1 setShow={setShow} />
+                    </Col>                </Col>
 
             </Row>
         </div>

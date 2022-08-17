@@ -1,4 +1,4 @@
-import React ,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Row, Card, Col, Button } from 'react-bootstrap';
 import Accordion from '../../components/accrdion/Accordion';
 import AutoVideo from '../../components/Vidoe/AutoVideo'
@@ -9,7 +9,7 @@ import imgg from '../../img/imgg.jpeg'
 import Button1 from '../../Button1';
 
 
-function AboutClinicContainer({setShow}) {
+function AboutClinicContainer({ setShow }) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -49,11 +49,11 @@ function AboutClinicContainer({setShow}) {
                                 Профессионализм. Забота о каждом пациенте.</p>
 
                             <div className='div_a mt-4'>
-                            <Button1 setShow={setShow}/>
+                                <Button1 setShow={setShow} />
 
                             </div>
                         </Col>
-                        
+
                         <Col xs={12} md={6}>
                             <AutoVideo />
                         </Col>
@@ -61,7 +61,7 @@ function AboutClinicContainer({setShow}) {
                 </>
             </div>
 
-            <div className='container text-center 'data-aos="fade-up">
+            <div className='container text-center ' data-aos="fade-up">
                 <h1>5 причин доверить нам улыбку</h1>
             </div>
             <div className='container'>
@@ -75,9 +75,9 @@ function AboutClinicContainer({setShow}) {
                     <Col xs={12} md={4} >
                         <img data-aos="fade-down"
                             data-aos-easing="linear"
-                            data-aos-duration="1500"  className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3939-3139-4163-b233-373731323231/-/format/webp/IMG_1368.jpeg' alt='' /></Col>
+                            data-aos-duration="1500" className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3939-3139-4163-b233-373731323231/-/format/webp/IMG_1368.jpeg' alt='' /></Col>
                     <Col xs={12} md={4}>
-                        <img  data-aos="fade-left"className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3038-6366-4265-a133-616538313461/-/format/webp/IMG_1374.jpeg' alt='' />
+                        <img data-aos="fade-left" className='w-100 mb-2' src='https://thumb.tildacdn.com/tild3038-6366-4265-a133-616538313461/-/format/webp/IMG_1374.jpeg' alt='' />
                     </Col>
                 </Row>
             </div>
@@ -85,7 +85,7 @@ function AboutClinicContainer({setShow}) {
                 <Row>
                     <Col xs={12} md={6} lg={6}>
                         <div data-aos="zoom-in" className='justify-content-evenly a text-center' >
-                            <img  class=" t013__img t-img" src={imgg} imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                            <img class=" t013__img t-img" src={imgg} imgfield="img" data-tu-max-width="320" data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                             </img>
                             <Card.Title className='text_nav'>Доктор Айдаров</Card.Title>
                             <span className='text_nav' style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
@@ -112,14 +112,14 @@ function AboutClinicContainer({setShow}) {
                 <Row >
                     <Col xs={12} md={6} lg={6}>
                         <div className='d-block'><span className='display-3 h1'>Давайте<br />познакомимся <br />поближе</span>
-                                    <div className='text_nav '>
-                                        Стоматологическая клиника «Лаборатория улыбок»<br />
-                                        преображает улыбки пациентов с 2015 года. Её основатель <br />
-                                        Айдаров прошёл путь от работы в государственной<br />
-                                        поликлинике до открытия собственной клиники в центре<br />
-                                        Москвы и на своём опыте знает, что главными приоритетами<br />
-                                        в работе врача являются забота о пациентах и качество услуг.
-                                    </div>
+                            <div className='text_nav '>
+                                Стоматологическая клиника «Лаборатория улыбок»<br />
+                                преображает улыбки пациентов с 2015 года. Её основатель <br />
+                                Айдаров прошёл путь от работы в государственной<br />
+                                поликлинике до открытия собственной клиники в центре<br />
+                                Москвы и на своём опыте знает, что главными приоритетами<br />
+                                в работе врача являются забота о пациентах и качество услуг.
+                            </div>
                         </div>
                     </Col>
                     <Col xs={12} md={6} lg={6}>
@@ -144,20 +144,20 @@ function AboutClinicContainer({setShow}) {
                 </Col>
                 <Col xs={10} md={6} lg={5}>
                     <h3 data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">выпить чашечку кофе</h3>
+                        data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">выпить чашечку кофе</h3>
                 </Col>
                 <Col xs={10} md={6} lg={5}>
                     <h3 data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">послушать музыку</h3>
+                        data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">послушать музыку</h3>
                 </Col> <Col xs={10} md={6} lg={5}>
                     <h3 data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">пообщаться с сотрудниками</h3>
+                        data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">пообщаться с сотрудниками</h3>
                 </Col> <Col xs={10} md={6} lg={5}>
                     <h3 data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom"  class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
+                        data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
                 </Col>
             </div>
-            <StuffContainer/>
+            <StuffContainer />
             <RunText />
 
         </div>
