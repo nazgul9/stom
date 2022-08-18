@@ -4,10 +4,10 @@ import RunText from '../../components/runText/RunText';
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import AOS from 'aos'
 import Accordion from '../../components/accrdion/Accordion';
-import imgg from  '../../img/imgg.jpeg'
+import imgg from '../../img/imgg.jpeg'
 import Button1 from '../../Button1';
 
-function Brekety({setShow}) {
+function Brekety({ setShow }) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -79,15 +79,18 @@ function Brekety({setShow}) {
         <>
             <div className="container">
                 <Row>
-                    <h1 style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                    <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                         Получите обворожительную и функциональную<br />  улыбку с удобными брекет-системами
                     </h1>
                     <Col xs={12} md={6}>
 
-                        <p className="mt-5" style={{ color: "white", fontSize: "20px" }}>
+                        <h5 className="mt-2" style={{ color: "white", }}>
                             Исправление прикуса с помощью несъёмных<br /> ортодонтических конструкций. Эффективный<br /> способ борьбы с проблемой искривлённых<br /> зубов и неправильного прикуса.
-                        </p>
-                        <Button1 setShow={setShow}/>
+                        </h5>
+                        <Col sm={6} className="mt-2">
+                            <Button1 className="mt-2" setShow={setShow} />
+
+                        </Col>
                     </Col>
                     <Col xs={12} md={6}>
                         <AutoVideo />
@@ -96,18 +99,18 @@ function Brekety({setShow}) {
             </div>
             <RunText />
             <div className="container">
-                <h1 style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "20px" }}>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Звезды и знаменитости, сделавшие<br /> тотальное преображение улыбки<br /> у доктора Эльмара
                 </h1>
                 <Row className='mt-5'>
-                    <p className="text-center" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                    <h1 className="text-center" style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif' }}>
                         Наши пациенты
-                    </p>
+                    </h1>
                     {patients.map(e => {
                         return (
                             <>
                                 <Col md={4} sm={6} xs={12}>
-                                    <div>
+                                    <div className='mt-5'>
                                         <Card.Img src={e.img}></Card.Img>
                                         <Card.Title className="mt-3" style={{ color: "white", }}>{e.title}</Card.Title>
                                         <Card.Text className="mt-1" style={{ color: "white", }}>{e.known_for}</Card.Text>
@@ -148,7 +151,7 @@ function Brekety({setShow}) {
                         </Card.Img>
                     </Col>
                     <Col md={6} >
-                        <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", }}>
+                        <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", marginTop: "50px" }}>
                             Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
                         </Card.Text>
                         <Card.Text style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
@@ -157,16 +160,17 @@ function Brekety({setShow}) {
                     </Col>
                 </Row>
                 <div className="container">
-                    <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                    <h1 className="mt-3" style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>
                         Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* .
-                    </p>
-                    <Button1 setShow={setShow}/>
-
+                    </h1>
+                    <Col sm={3}>
+                        <Button1 setShow={setShow} />
+                    </Col>
                     <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
                 </div>
             </div>
             <div className="container">
-                <h1 style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     В каких случаях помогут брекеты?
                 </h1>
                 <Row className="mt-2">
@@ -206,7 +210,7 @@ function Brekety({setShow}) {
                         </Col>
                     </Col>
                 </Row>
-                <h1 style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Преимущества брекетов
                 </h1>
                 <Card.Text style={{ color: "white", fontSize: "20px", }}>
@@ -245,20 +249,18 @@ function Brekety({setShow}) {
                         <p style={{ color: "white" }} className="text-center p-2 m-2">Ровная и здоровая улыбка</p>
                     </Col>
                 </Row>
-                <h1 style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Сколько будет стоить лечение?
                 </h1>
                 <Row>
                     <Col xs={12} md={4} >
                         <h3 data-aos="fade-up"
                             data-aos-anchor-placement="top-bottom" class="tn-atom text-center  p-2 m-2">01. Чек-ап</h3>
-                        <p style={{ color: "#d3bb7e" }} className=" p-2 m-2">25 000 сом.</p>
                         <span style={{ color: "white", fontSize: "1rem" }}>-полный осмотр и диагностика;</span><br />
                         <span style={{ color: "white", fontSize: "1rem" }}>-создание цифровых слепков нижней<br /> и верхней челюстей;</span><br />
                         <span style={{ color: "white", fontSize: "1rem" }}>-3D-моделирование зубов;</span><br />
                         <span style={{ color: "white", fontSize: "1rem" }}> -консультация врача;</span><br />
                         <span style={{ color: "white", fontSize: "1rem" }}>-консилиум врачей с опытом<br /> работы более 15 лет;</span><br />
-
                     </Col>
                     <Col xs={12} md={4} >
                         <h3 data-aos="fade-up"
@@ -285,26 +287,28 @@ function Brekety({setShow}) {
 
             </div>
             <div className="container">
-                <h1 style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>Частые вопросы</h1>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>Частые вопросы</h1>
                 <Accordion name={a} />
-                <h1 style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>Получите пошаговый план к здоровой <br />и красивой улыбке на консультации</h1>
-                <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', }}>
-                   Получите пошаговый план к здоровой и красивой улыбке на консультацииВ стоматологической клинике «Лаборатории улыбок Dr. Elmar» проводится первичная консультация для оценки состояния зубов и дёсен с помощью сверхточного рентгеновского аппарата Sirona Orthophos XG, который обеспечивает высокое качество снимков при минимальной дозе облучения.
-                   </Card.Text>
+              
+
                 <Row>
-               
-               <Col md={6} >
-                   
-                   <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
-                   С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
-                   </Card.Text>
-                   <Button1 setShow={setShow}/>
-               </Col> 
-               <Col className='mt-5'>
-                   <Card.Img className=" w-75" src='https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG'>
-                   </Card.Img>
-               </Col>
-           </Row>
+
+                    <Col md={6} >
+                    <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>Получите пошаговый план к здоровой <br />и красивой улыбке на консультации</h1>
+                        <h3 style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                            Получите пошаговый план к здоровой и красивой улыбке на консультацииВ стоматологической клинике «Лаборатории улыбок Dr. Elmar» проводится первичная консультация для оценки состояния зубов и дёсен с помощью сверхточного рентгеновского аппарата Sirona Orthophos XG, который обеспечивает высокое качество снимков при минимальной дозе облучения.
+                        </h3>
+                        <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
+                            С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
+                        </Card.Text>
+<Col sm={6}>
+<Button1 setShow={setShow} />
+    </Col>                    </Col>
+                    <Col className='mt-5'>
+                        <Card.Img className=" w-75" src='https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG'>
+                        </Card.Img>
+                    </Col>
+                </Row>
             </div>
         </>
     );

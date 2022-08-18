@@ -62,7 +62,7 @@ function AboutClinicContainer({ setShow }) {
             </div>
 
             <div className='container text-center ' data-aos="fade-up">
-                <h1>5 причин доверить нам улыбку</h1>
+                <h1 className='mt-5'>5 причин доверить нам улыбку</h1>
             </div>
             <div className='container'>
                 <Accordion name={data} />
@@ -111,7 +111,7 @@ function AboutClinicContainer({ setShow }) {
             <div className='container mt-5'>
                 <Row >
                     <Col xs={12} md={6} lg={6}>
-                        <div className='d-block'><span className='display-3 h1'>Давайте<br />познакомимся <br />поближе</span>
+                        <div className='d-block'><span className=' h1'>Давайте познакомимся <br />поближе</span>
                             <div className='text_nav '>
                                 Стоматологическая клиника «Лаборатория улыбок»<br />
                                 преображает улыбки пациентов с 2015 года. Её основатель <br />
@@ -124,7 +124,7 @@ function AboutClinicContainer({ setShow }) {
                     </Col>
                     <Col xs={12} md={6} lg={6}>
                         <img className='w-100' src="https://thumb.tildacdn.com/tild3734-6164-4733-a634-663535363130/-/cover/1000x1200/center/center/-/format/webp/IMG_0723.JPG" />
-                        <div className='d-block'><h2 className='display-5 mt-5 text-white'>Со дня основания в клинике доктора Эльмара созданы сотни красивых улыбок.</h2>
+                        <div className='d-block'><h2 className=' mt-5 text-white'>Со дня основания в клинике доктора Эльмара созданы сотни красивых улыбок.</h2>
 
                             <Card.Text className='text_nav'>
                                 Зачастую пациенты становятся нашими друзьями и приводят к нам членов семьи, а также рекомендуют клинику знакомым.

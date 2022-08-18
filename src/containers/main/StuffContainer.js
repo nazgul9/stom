@@ -80,7 +80,10 @@ function StuffContainer() {
                         <Card.Text style={{ color: "white", fontSize: "20px" }}>
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
                         </Card.Text>
+                        <Col sm={6}>
                         <Button1 />
+
+                        </Col>
                     </Col>
                     <Col className='mt-5'>
                         <Card.Img src='https://static.tildacdn.com/tild3331-3833-4964-b366-656665383262/photo.svg'>

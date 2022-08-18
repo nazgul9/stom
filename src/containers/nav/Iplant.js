@@ -5,7 +5,7 @@ import Accordion from '../../components/accrdion/Accordion';
 import RunText from '../../components/runText/RunText';
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import imgg from '../../img/imgg.jpeg'
-function Iplant({setShow}) {
+function Iplant({ setShow }) {
     const patients = [
         {
             img: "https://thumb.tildacdn.com/tild3534-3033-4632-b064-356232633331/-/cover/720x1100/center/center/-/format/webp/G_98zN2SdVE.jpg",
@@ -39,27 +39,27 @@ function Iplant({setShow}) {
     const data1 = [
         {
             title: "Большой опыт проведения операций",
-            ptitile:"Да, такое возможно. В этом случае врач составляет план поэтапного восстановления с расписанием операций, чтобы снизить нагрузку на организм."
+            ptitile: "Да, такое возможно. В этом случае врач составляет план поэтапного восстановления с расписанием операций, чтобы снизить нагрузку на организм."
 
         },
         {
             title: "Существует ли риск отторжения импланта?",
-            ptitile:"Если операция проводится опытным врачом, соблюдается протокол установки и используется качественный материал, то риск отторжения сводится к минимуму."
+            ptitile: "Если операция проводится опытным врачом, соблюдается протокол установки и используется качественный материал, то риск отторжения сводится к минимуму."
 
         },
         {
             title: "Почему используют именно титановые стержни?",
-            ptitile:"Биосовместимы с тканями"
+            ptitile: "Биосовместимы с тканями"
 
         },
         {
             title: "Почему не всегда назначают одномоментную имплантацию?",
-            ptitile:"Решение о способе имплантации принимает только врач после проведения тщательной диагностики. В ходе обследования специалист оценивает не только состояние зубов и дёсен, но и объём костной ткани, а также выявляет возможные патологии. Как и при любой операции, всё зависит от индивидуальных особенностей отдельного пациента.."
+            ptitile: "Решение о способе имплантации принимает только врач после проведения тщательной диагностики. В ходе обследования специалист оценивает не только состояние зубов и дёсен, но и объём костной ткани, а также выявляет возможные патологии. Как и при любой операции, всё зависит от индивидуальных особенностей отдельного пациента.."
 
         },
         {
             title: "Если удалили зуб, лучше сразу обратиться за имплантацией или можно подождать несколько лет?",
-            ptitile:"Своевременная установка очень важна, так как костная ткань со временем истончается, и провести операцию без дополнительного вмешательства становится всё сложнее с каждым годом."
+            ptitile: "Своевременная установка очень важна, так как костная ткань со временем истончается, и провести операцию без дополнительного вмешательства становится всё сложнее с каждым годом."
 
         },
     ]
@@ -67,12 +67,12 @@ function Iplant({setShow}) {
         <>
             <div className="container">
                 <Row>
-                    <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                    <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                         Имплантация зубов. Беремся за самые сложные случаи
-                    </p>
-                    <p style={{ color: "#d3bb7e", fontSize: "30px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                    </h1>
+                    <h3 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "20px" }}>
                         Потеря зубов — это не преграда для здоровой<br /> и красивой улыбки. Имплантация поможет <br /> вернуть утраченные зубы с помощью самых<br /> современных технологий.
-                    </p>
+                    </h3>
                     <Col md={6} className={""}>
                         <Card.Text style={{ color: "white", fontSize: "20px" }}>
                             -Современное оборудование,
@@ -89,8 +89,9 @@ function Iplant({setShow}) {
                         <Card.Text style={{ color: "#d3bb7e", fontSize: "20px" }}>
                             Всё это позволяет вернуть нашим<br /> пациентам здоровье и красоту зубов.
                         </Card.Text>
-                        <Button1 setShow={setShow}/>
-
+                        <Col sm={6}>
+                            <Button1 setShow={setShow} />
+                        </Col>
                     </Col>
                     <Col className='mt-5'>
                         <AutoVideo />
@@ -100,9 +101,9 @@ function Iplant({setShow}) {
 
             <RunText />
             <div className="container">
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
-                    Звезды и знаменитости, сделавшие <br />тотальное преображение улыбки <br />у доктора Эльмара
-                </p>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                    Звезды и знаменитости, сделавшие тотальное<br /> преображение улыбки у доктора Эльмара
+                </h1>
                 <Row className='mt-5'>
 
                     {patients.map(e => {
@@ -146,20 +147,22 @@ function Iplant({setShow}) {
                         </Card.Img>
                     </Col>
                     <Col md={6} >
-                        <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", }}>
+                        <h3 style={{ color: "#d3bb7e", }}>
                             Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
-                        </Card.Text>
-                        <Card.Text style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
+                        </h3>   
+                        <h3 style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
                             В нашей клинике чекап не растягивается на несколько приемов, его можно пройти всего за 40-60 минут
-                        </Card.Text>
+                        </h3>
                     </Col>
                 </Row>
             </div>
             <div className="container mt-5">
-                <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                <h1 className="mb-3" style={{ color: "#d3bb7e",  fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч*.
-                </p>
-                <Button1 setShow={setShow}/>
+                </h1>
+                <Col sm={3}> 
+                <Button1 setShow={setShow} />
+                </Col>
                 <p className="mb-5" style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
                 <p className="mt-5 text-center" style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Какие проблемы решает имплантация зубов?
@@ -195,9 +198,9 @@ function Iplant({setShow}) {
                 </Table>
             </div>
             <div className="container mt-5 text-center">
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "100px" }}>
-                    Преимущества имплантации в клинике «Лаборатория улыбок Dr. Aidarov
-                </p>
+                <h1 style={{ color: "#d3bb7e",  fontFamily: 'GraphikTT Arial sans-serif', marginTop: "100px" }}>
+                    Преимущества имплантации в клинике <br/>«Лаборатория улыбок Dr. Aidarov
+                </h1>
                 <Accordion name={data} />
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Виды имплантации
@@ -207,39 +210,39 @@ function Iplant({setShow}) {
                 </p>
                 <Row style={{ textAlign: "center" }}>
                     <Col md={6} className="mt-3">
-                <div style={{
-                        width: 'auto', textAlign: "center", border: '2px solid #d3bb7e',
-                    }}>
-                        <Card.Body>
-                            <Card.Title style={{ color: "#d3bb7e", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>КЛАССИЧЕСКИЙ</Card.Title>
-                            <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', margin: "20px", textAlign: "center" }}>
-                                Имплантация происходит после 2<br/> месяцев с момента удаления зуба,<br/> а установка коронки ещё через<br/> несколько месяцев.
-                            </Card.Text>
-                        </Card.Body>
-                    </div>
+                        <div style={{
+                            width: 'auto', textAlign: "center", border: '2px solid #d3bb7e',
+                        }}>
+                            <Card.Body>
+                                <h3 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>КЛАССИЧЕСКИЙ</h3>
+                                <h3 style={{ color: "white",  fontFamily: 'GraphikTT Arial sans-serif', margin: "20px", textAlign: "center" }}>
+                                    Имплантация происходит после 2<br /> месяцев с момента удаления зуба,<br /> а установка коронки ещё через<br /> несколько месяцев.
+                                </h3>
+                            </Card.Body>
+                        </div>
                     </Col>
                     <Col md={6} className="mt-3">
-                    <div style={{
-                        width: 'auto', textAlign: "center", border: '2px solid #d3bb7e', 
-                    }}>
-                        <Card.Body>
-                            <Card.Title style={{ color: "#d3bb7e", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>ОДНОМОМЕНТНЫЙ</Card.Title>
-                            <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', margin: "50px", textAlign: "center" }}>
-                            Установка имплантата проходит<br/> сразу после удаления зуба.
-                            </Card.Text>
-                        </Card.Body>
-                    </div>
+                        <div style={{
+                            width: 'auto', textAlign: "center", border: '2px solid #d3bb7e',
+                        }}>
+                            <Card.Body>
+                                <h3 style={{ color: "#d3bb7e",  fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>ОДНОМОМЕНТНЫЙ</h3>
+                                <h3 style={{ color: "white",  fontFamily: 'GraphikTT Arial sans-serif', margin: "50px", textAlign: "center" }}>
+                                    Установка имплантата проходит<br /> сразу после удаления зуба.
+                                </h3>
+                            </Card.Body>
+                        </div>
                     </Col>
                 </Row>
-               
+
             </div>
             <div className="container">
-            <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "100px" }}>
-                Частые вопросы
-                </p>
-                <Accordion name={data1}/>
-                </div>
-                <RunText/>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "100px" }}>
+                    Частые вопросы
+                </h1>
+                <Accordion name={data1} />
+            </div>
+            <RunText />
 
         </>
     );

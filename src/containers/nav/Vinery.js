@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import RunText from '../../components/runText/RunText';
 import AOS from 'aos'
-import CollSenter from '../../components/collSenter/CollSenter';
 import AutoVideo from '../../components/Vidoe/AutoVideo';
 import StuffContainer from '../../containers/main/StuffContainer'
 import imgg from '../../img/imgg.jpeg'
@@ -10,25 +9,24 @@ import Button1 from '../../Button1'
 
 
 function Vinery({setShow}) {
-    const [openComponent, setOpenComponent] = useState(false)
-    const [fullscreen, setFullscreen] = useState(true);
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
-
-
+    
     return (
         <div className="container">
             <Row>
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 className='mt-5'>
                     Получите улыбку как у звёзд благодаря сверхтонким винирам от доктора Эльмара
-                </p>
+                </h1>
                 <Col md={6} >
-                    <Card.Text style={{ color: "white", fontSize: "20px" }}>
+                    <h2 style={{ color: "white", marginTop: "40px" }} >
                         С помощью передовых методик создаём белоснежную улыбку, которой хочется делиться с окружающими
-                    </Card.Text>
+                    </h2>
+                    <Col sm={6}>
                    <Button1 setShow={setShow}/>
+                    </Col>
                 </Col>
                 <Col className='mt-5'>
                     <AutoVideo />
@@ -63,10 +61,10 @@ function Vinery({setShow}) {
                     <Card.Img className="h-100 w-100" src='https://thumb.tildacdn.com/tild6663-6334-4062-b764-356234363039/-/format/webp/diagnostika-min.jpg'>
                     </Card.Img>
                 </Col>
-                <Col md={6} >
-                    <Card.Text style={{ color: "#d3bb7e", fontSize: "35px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                <Col>
+                    <h2 style={{ color: "#d3bb7e", marginTop:"100px",fontFamily: 'GraphikTT Arial sans-serif', }}>
                         Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
-                    </Card.Text>
+                    </h2>
                     <Card.Text style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
                         В нашей клинике чекап не растягивается на несколько приемов, его можно пройти всего за 40-60 минут
                     </Card.Text>
@@ -81,19 +79,21 @@ function Vinery({setShow}) {
                 <Button1 setShow={setShow}/>
             </div>
             <div className="container">
-                <p style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                <h1 style={{ color: "white",  fontFamily: 'GraphikTT Arial sans-serif',marginTop:"50px" }}>
                     Получите пошаговый план к здоровой и красивой улыбке на консультации
-                </p>
+                </h1>
                 <Row>
                
                 <Col md={6} >
-                    <Card.Text style={{ color: "#d3bb7e", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                    <Card.Title style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif',marginTop:"150px" }}>
                     В стоматологической клинике «Лаборатории улыбок Dr. Elmar» проводится первичная консультация для оценки состояния зубов и дёсен с помощью сверхточного рентгеновского аппарата Sirona ORTHOPHOS XG, который обеспечивает высокое качество снимков при минимальной дозе облучения.
-                    </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "20px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
+                    </Card.Title>
+                    <Card.Title style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
-                    </Card.Text>
+                    </Card.Title>
+                    <Col sm={6}>
                   <Button1 setShow={setShow}/>
+                    </Col>
                 </Col> 
                 <Col className='mt-5'>
                     <Card.Img className=" w-75" src='https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG'>
