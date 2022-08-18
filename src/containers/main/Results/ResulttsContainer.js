@@ -14,10 +14,8 @@ function ResulttsContainer(props) {
                             <Col  md={6} xs={10}>
                                 <Link to={'/'} className="div_a">
                                     Перейти на главную
-
                                 </Link>
                         </Col>
-
                         <Col xs={12} md={6}>
                             <AutoVideo />
                         </Col>

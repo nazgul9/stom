@@ -55,7 +55,7 @@ function Otbali({setShow}) {
             <div className="container">
                 <Row>
                     <Col xs={12} md={6}>
-                        <h1 style={{ color: "white", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                        <h1 style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                             Станьте обладателем<br /> ослепительной<br /> улыбки с помощью<br /> современных<br /> технологий <br /> отбеливания зубов
                         </h1>
                     </Col>
@@ -63,12 +63,11 @@ function Otbali({setShow}) {
                         <AutoVideo />
                     </Col>
                     <Col xs={12} md={6}>
-                        <p className="mt-5" style={{ color: "#d3bb7e", fontSize: "20px" }}>
+                        <h4  style={{ color: "#d3bb7e", }}>
                             Белоснежная улыбка без вреда для зубов
-                        </p>
+                        </h4>
                     </Col>
-                    <Col xs={12} md={6}>
-                       
+                    <Col xs={12} md={3}>
                         <Button1 setShow={setShow} />
                     </Col>
                 </Row>
@@ -77,9 +76,9 @@ function Otbali({setShow}) {
                 <RunText />
             </div>
             <div className="container">
-                <p className="mt-5" style={{ color: "#d3bb7e", fontSize: "50px" }}>
-                    Звезды и знаменитости, сделавшие<br /> тотальное преображение улыбки <br />у доктора Эльмара
-                </p>
+                <h1 className="mt-5 text-center" style={{ color: "#d3bb7e",  }}>
+                    Звезды и знаменитости, сделавшие тотальное <br />преображение улыбки у доктора Эльмара
+                </h1>
                 <Row className='mt-5'>
                     {patients.map(e => {
                         return (
@@ -125,9 +124,9 @@ function Otbali({setShow}) {
                         </Card.Img>
                     </Col>
                     <Col md={6}>
-                        <Card.Text style={{ color: "#d3bb7e", fontSize: "30px", }}>
+                        <h4 style={{ color: "#d3bb7e", marginTop: "100px", }}>
                             Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
-                        </Card.Text>
+                        </h4>
                         <Card.Text style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "5px" }}>
                             В нашей клинике чекап не растягивается на несколько приемов, его можно пройти всего за 40-60 минут
                         </Card.Text>
@@ -136,19 +135,21 @@ function Otbali({setShow}) {
             </div>
             <div className="container">
 
-                <p className="mt-3" style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
+                <h1 className="mt-5" style={{ color: "#d3bb7e",  fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* .
-                </p>
-                <p style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', fontSize: "25px" }}>Оставьте контакты, и мы свяжемся с вами, чтобы <br />подобрать удобное время для записи на консультацию.</p>
+                </h1>
+                <h4 style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif',  }}>Оставьте контакты, и мы свяжемся с вами, чтобы <br />подобрать удобное время для записи на консультацию.</h4>
+                <Col sm={3}>
                 <Button1 setShow={setShow}/>
+                </Col>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "20px" }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
             </div>
             <div className="container">
                 <Row className="mt-5">
                     <Col md={6} className={"m-5"}>
-                        <Card.Text style={{ color: "#d3bb7e", fontSize: "60px", }}>
+                        <h1 style={{ color: "#d3bb7e",  }}>
                             Виды <br />отбеливания
-                        </Card.Text>
+                        </h1>
                     </Col>
                     <Col className='mt-5'>
                         <Card.Text style={{ color: "#d3bb7e", fontSize: "25px", }}>
@@ -159,13 +160,13 @@ function Otbali({setShow}) {
                 </Row>
             </div>
             <div className="container text-center">
-                <Card.Text style={{ color: "white", fontSize: "40px", }}>
+                <h3 style={{ color: "white", marginTop:"20px" }}>
                     Какую систему отбеливания выбрать?
-                </Card.Text>
+                </h3>
                 <Accordion name={datas} />
-                <Card.Text style={{ color: "#d3bb7e", fontSize: "40px", }}>
+                <h3 style={{ color: "#d3bb7e", marginBottom:"20px" }}>
                     5 шагов до улыбки мечты
-                </Card.Text>
+                </h3>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

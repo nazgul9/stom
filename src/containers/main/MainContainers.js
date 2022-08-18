@@ -175,16 +175,15 @@ function MainContainers({setShow}) {
       <Container>
         <Row className="mt-5">
           <Col md={6} xs={10}>
-            <p
-              style={{color: '#d3bb7e', fontSize: '50px', marginTop: '50px'}}>
+            <h1>
               Ваша улыбка - наша забота!
-            </p>
+            </h1>
 
             <Card.Text style={{color: 'white', fontSize: '20px'}}>
               Превратите её в свою визитную карточку, как это уже сделали многие звёзды, певцы, спортсмены, политики и
               предприниматели
             </Card.Text>
-            <Button1 setShow={setShow}/>
+           <Col sm={6} className="text-center"> <Button1 setShow={setShow}/></Col>
 
           </Col>
           <Col md={6} xs={10}>
@@ -241,10 +240,9 @@ function MainContainers({setShow}) {
             </Col>
           </Row>
           <Col xs={10} md={8}>
-            <p
-              style={{color: '#d3bb7e', fontSize: '50px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
+            <h1 className='mt-5'>
               Наши довольные пациенты
-            </p>
+            </h1>
           </Col>
 
           <Row className="mt-5 ">
@@ -295,8 +293,7 @@ function MainContainers({setShow}) {
 
           
           <Row>
-          <h1
-            style={{color: '#d3bb7e', fontSize: '45px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
+          <h1 className='mt-5'>
             Чем мы можем вам помочь
           </h1>
             <Col lg={6} xs={12}>
@@ -424,14 +421,9 @@ function MainContainers({setShow}) {
           </Row>
 
           <Row>
-            <p style={{
-              color: '#d3bb7e',
-              fontSize: '50px',
-              fontFamily: 'GraphikTT Arial sans-serif',
-              marginTop: '50px',
-            }}>
+            <h1 className='mt-5 mb-3 text-center'>
               Почему клиника Айдарова?
-            </p>
+            </h1>
             <Col md={4} xs={10}>
               <Card md={3} xs={10} style={{borderColor: 'black'}}>
                 <img src={komanda}/>
@@ -468,10 +460,10 @@ function MainContainers({setShow}) {
             </Col>
           </Row>
           <Col md={10} xs={10}>
-            <p
-              style={{color: '#d3bb7e', fontSize: '50px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
+            <h1
+             className='mt-5 text-center'>
               Наши результаты
-            </p>
+            </h1>
           </Col>
           <Row className="justify-content-center">
             <Col md={10} xs={10} className="mt-5">
@@ -501,14 +493,9 @@ function MainContainers({setShow}) {
           </Row>
           <Row>
             <Col md={10} xs={10}>
-              <p style={{
-                color: '#d3bb7e',
-                fontSize: '50px',
-                fontFamily: 'GraphikTT Arial sans-serif',
-                marginTop: '50px',
-              }}>
+              <h1 className='mt-5'>
                 Наши отзывы
-              </p>
+              </h1>
             </Col>
 
             <Col md={12} xs={10} className="mt-5">
@@ -541,10 +528,9 @@ function MainContainers({setShow}) {
             </Col>
           </Row>
           <Col md={10} xs={10}>
-            <p
-              style={{color: '#d3bb7e', fontSize: '50px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
+            <h1 className='mt-5'>
               Наша команда
-            </p>
+            </h1>
           </Col>
           <Row>
             <Col md={6} xs={10}>
@@ -570,10 +556,9 @@ function MainContainers({setShow}) {
             </Col>
           </Row>
           <Col md={8} xs={10}>
-            <p
-              style={{color: '#d3bb7e', fontSize: '50px', fontFamily: 'GraphikTT Arial sans-serif', marginTop: '50px'}}>
+            <h1 className='mt-5'>
               Часто задаваемые вопросы
-            </p>
+            </h1>
           </Col>
           <Col md={12} xs={10}>
             <Accordion defaultActiveKey={['0']} alwaysClose style={{backgroundColor: 'black', color: '#d3bb7e'}}>

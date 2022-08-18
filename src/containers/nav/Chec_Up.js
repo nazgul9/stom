@@ -60,14 +60,16 @@ function Chec_Up({ setShow }) {
     return (
         <div className="container">
             <Row>
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 className='mt-5'>
                     Полный чекап. Пошаговый план до улыбки мечты
-                </p>
+                </h1>
                 <Col md={6} xs={10}>
                     <Card.Text style={{ color: "white", fontSize: "20px" }}>
                         Комплексная проверка состояния полости рта. Разработка этапов лечения. Консилиум опытных врачей клиники для составления персонального плана по созданию идеально ровной и красивой улыбки.
                     </Card.Text>
-                    <Button1 setShow={setShow} />
+                    <Col sm={6}>
+                        <Button1 setShow={setShow} />
+                    </Col>
                 </Col>
                 <Col className='mt-5'>
                     <AutoVideo name={data} />
@@ -75,9 +77,9 @@ function Chec_Up({ setShow }) {
             </Row>
             <RunText />
             <div className="container">
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 className='mt-5'>
                     Звезды и знаменитости, сделавшие тотальное преображение улыбки у доктора Эльмара
-                </p>
+                </h1>
                 <Row className='mt-5'>
 
                     {patients.map(e => {
@@ -117,55 +119,55 @@ function Chec_Up({ setShow }) {
                 </Row>
             </div>
             <div className="container">
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 className='mt-5'>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* современное.
-                </p>
-                <Col sm={6}>
+                </h1>
+                <Col sm={3}>
                     <Button1 setShow={setShow} />
-
                 </Col>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
             </div>
             <div className="container">
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 className='mt-5'>
                     В каких случаях требуется полный чекап полости рта?
-                </p>
+                </h1>
             </div>
             <Accordion name={data} />
             <div className="container">
 
             </div>
-            <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+            <h1 className='mt-5'>
                 Получите пошаговый план к здоровой
                 <br />и ровной улыбке на консультации
-            </p>
+            </h1>
             <Row>
                 <Col className='mt-5'>
                     <Card.Img src='https://thumb.tildacdn.com/tild6634-3836-4936-a564-373436383964/-/format/webp/IMG_1360.JPG'>
                     </Card.Img>
                 </Col>
                 <Col md={6} >
-                    <Card.Text style={{ color: "#d3bb7e", fontSize: "40px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                    <h2 style={{ color: "#d3bb7e", marginTop: "40px" }}>
                         Чекап включает в себя:
-                    </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                    </h2>
+                    <h2 style={{ color: "white", marginTop: "40px" }}>
                         осмотр пациента
-                    </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                    </h2>
+                    <h2 style={{ color: "white", marginTop: "40px" }}>
                         диагностику (снимки КТ, ОПТГ)
-                    </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                    </h2>
+                    <h2 style={{ color: "white", marginTop: "40px" }}>
                         консультацию врача
-                    </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                    </h2>
+                    <h2 style={{ color: "white", marginTop: "40px" }}>
                         консультацию врача
-                    </Card.Text>
-                    <Card.Text style={{ color: "white", fontSize: "40px", marginTop: "40px" }}>
+                    </h2>
+                    <h2 style={{ color: "white", marginTop: "40px" }}>
                         создание цифровых слепков нижней и верхней челюстей
-                    </Card.Text>
-                    <Col sm={6}>
+                    </h2>
+                    <Col sm={6} className="mt-5">
                         <Button1 setShow={setShow} />
-                    </Col>                </Col>
+                    </Col>                
+                    </Col>
 
             </Row>
         </div>
