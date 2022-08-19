@@ -1,7 +1,7 @@
 import React from 'react'
 import './Appcontainer.scss'
 import {Navbar, Container, Nav, NavDropdown, Col, Row} from 'react-bootstrap'
-import image from '../Image/doctor.jpg'
+import a from '../../img.aidarov/a.png'
 
 function AppContainers(props) {
   return (
@@ -9,12 +9,13 @@ function AppContainers(props) {
       <Navbar style={{
         backgroundColor: '#060608',
       }} bg="dark" variant="dark" expand="lg" fixed="top">
-        <Container className={'d-flex justify-content-between align-items-center w-100'}>
+        <Container className={'d-flex justify-content-between align-items-center '}>
           <Navbar.Brand href="/">
             <img
-              style={{width: '70px', borderRadius: '50%'}} alt={''}
-              src={image}/>
-            {' '}DR.Aidarov
+              width="80px"
+              alt={''}
+              src={a}/>
+            {/* {' '}DR.Aidarov */}
           </Navbar.Brand>
           <Navbar.Collapse style={{flexGrow: 0}}>
             <Nav bg="dark">
@@ -42,8 +43,8 @@ function AppContainers(props) {
           <a href={'tel:+996776000000'} className={'p-2 rounded'} style={{
             color: 'white',
             backgroundColor: '#c2b285',
-            width: '270px',
-            fontSize: '25px',
+            // width: '270px',
+            // fontSize: '25px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

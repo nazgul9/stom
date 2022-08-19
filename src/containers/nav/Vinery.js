@@ -57,11 +57,11 @@ function Vinery({setShow}) {
                 </Row>
             </div>
             <Row>
-                <Col className='mt-5'>
+                <Col xs={12} md={6} lg={6} className='mt-5'>
                     <Card.Img className="h-100 w-100" src='https://thumb.tildacdn.com/tild6663-6334-4062-b764-356234363039/-/format/webp/diagnostika-min.jpg'>
                     </Card.Img>
                 </Col>
-                <Col>
+                <Col xs={12} md={6} lg={6}>
                     <h2 style={{ color: "#d3bb7e", marginTop:"100px",fontFamily: 'GraphikTT Arial sans-serif', }}>
                         Любое правильное ортодонтическое лечение (исправление прикуса, имплантация зубов или виниры) начинается с полной диагностики текущего состояния пациента, — чекапа.
                     </h2>
@@ -70,13 +70,15 @@ function Vinery({setShow}) {
                     </Card.Text>
                 </Col>
             </Row>
-            <StuffContainer />
+            <StuffContainer setShow={setShow}/>
             <div className="container">
                 <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', }}>
                     Запишитесь на бесплатный чекап полости рта.<br /> Экономия 25 тысяч* руб.
                 </p>
                 <p style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', }}>* эта сумма будет зачислена вам на баланс для последующего лечения</p>
+                <Col sm={3}>
                 <Button1 setShow={setShow}/>
+                </Col>
             </div>
             <div className="container">
                 <h1 style={{ color: "white",  fontFamily: 'GraphikTT Arial sans-serif',marginTop:"50px" }}>
@@ -91,7 +93,7 @@ function Vinery({setShow}) {
                     <Card.Title style={{ color: "white", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     С его помощью изготавливаются 2D-, 3D- и ОПТГ- (панорамные) снимки, наличие которых обязательно для постановки правильного диагноза и выбора метода лечения.
                     </Card.Title>
-                    <Col sm={6}>
+                    <Col sm={6} className="mt-4">
                   <Button1 setShow={setShow}/>
                     </Col>
                 </Col> 
@@ -102,7 +104,6 @@ function Vinery({setShow}) {
                 </Col>
             </Row>
             </div>
-            {/* <div class="tn-atom t-bgimg loaded" data-original="https://static.tildacdn.com/tild3765-3739-4430-a535-323165376139/IMG_3201.JPG" style="background-image: url(&quot;https://thumb.tildacdn.com/tild3765-3739-4430-a535-323165376139/-/cover/894x996/center/center/-/format/webp/IMG_3201.JPG&quot;);"> </div> */}
         </div>
     );
 }

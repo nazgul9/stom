@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Col, Container, Row, Card, Carousel} from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Col, Container, Row, Card, Carousel } from 'react-bootstrap'
 import RunText from '../../components/runText/RunText'
 import aidarov from '../Image/Aidarov.png'
 import aidarov2 from '../Image/aidarov2.jpg'
@@ -24,7 +24,7 @@ import konsultasya from '../Image/konsultasya.png'
 import Accordion from 'react-bootstrap/Accordion'
 import Button1 from '../../Button1'
 
-function MainContainers({setShow}) {
+function MainContainers({ setShow }) {
 
   const feedback = [
     {
@@ -179,31 +179,32 @@ function MainContainers({setShow}) {
               Ваша улыбка - наша забота!
             </h1>
 
-            <Card.Text style={{color: 'white', fontSize: '20px'}}>
+            <Card.Text style={{ color: 'white', fontSize: '20px' }}>
               Превратите её в свою визитную карточку, как это уже сделали многие звёзды, певцы, спортсмены, политики и
               предприниматели
             </Card.Text>
-           <Col sm={6} className="text-center"> <Button1 setShow={setShow}/></Col>
+            <Col sm={6} className="text-center"> <Button1 setShow={setShow} /></Col>
 
           </Col>
           <Col md={6} xs={10}>
-            <Card md={6} xs={8} style={{backgroundColor: 'black'}}>
-              <img src={aidarov2}/>
+            <Card md={6} xs={8} style={{ backgroundColor: 'black' }}>
+              <img src={aidarov2} />
             </Card>
           </Col>
         </Row>
       </Container>
-      <RunText/>
       <Container>
+      <RunText />
+
         <Row>
           <Row className="mt-5">
             <Col md={6} xs={10}>
-              <Card md={6} xs={10} style={{backgroundColor: 'black'}}>
-                <img src={aidarov}/>
+              <Card md={6} xs={10} style={{ backgroundColor: 'black' }}>
+                <img src={aidarov} />
               </Card>
 
             </Col>
-            <Col md={6} xs={10} style={{color: 'white', fontSize: '20px'}}>
+            <Col md={6} xs={10} style={{ color: 'white', fontSize: '20px' }}>
               <Card.Text>
                 <b> Здравствуйте!
                   Меня зовут Бекмамат Айдаров.
@@ -224,11 +225,11 @@ function MainContainers({setShow}) {
                 оценить результат, но и визуализировать процесс для пациента без боли и мучительных процедур.
                 Стоматология в настоящее время — это однозначно комфорт и приятное времяпрепровождение!
               </p>
-              <h5 style={{color: 'white'}}>
+              <h5 style={{ color: 'white' }}>
                 Добро пожаловать в клинику «Dr. Aidarov»!
               </h5>
-              <div style={{display: 'flex', justifyContent: 'between', color: 'black', marginTop: '50px'}}>
-              <Button1 setShow={setShow}/>
+              <div style={{ display: 'flex', justifyContent: 'between', color: 'black', marginTop: '50px' }}>
+                <Button1 setShow={setShow} />
 
                 <div className="div_b">
                   Образование
@@ -249,19 +250,19 @@ function MainContainers({setShow}) {
 
             <Col md={4} xs={10}>
               <Card md={4} xs={10}>
-                <img src={patient1}/>
+                <img src={patient1} />
               </Card>
 
             </Col>
             <Col md={4} xs={10}>
               <Card md={4} xs={10}>
-                <img src={patient5}/>
+                <img src={patient5} />
               </Card>
 
             </Col>
             <Col md={4} xs={10}>
               <Card md={4} xs={10}>
-                <img src={patient2}/>
+                <img src={patient2} />
               </Card>
 
             </Col>
@@ -270,10 +271,10 @@ function MainContainers({setShow}) {
             <Col xs={10} md={4} className="mt-5">
               <div className="justify-content-evenly text-center  ">
                 <img class="  t013__img t-img" src={aidarov4} imgfield="img" data-tu-max-width="320"
-                     data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
+                  data-tu-max-height="320" data-tu-cover="c" alt="" role="presentation">
                 </img>
                 <Card.Title className="text_nav">Бекмамат Айдаров</Card.Title>
-                <span className="text_nav" style={{fontSize: '14px', lineHeight: '18px'}} data-customstyle="yes">Основатель и<br/> главный врач клиники, <br/>стоматолог-ортопед</span>
+                <span className="text_nav" style={{ fontSize: '14px', lineHeight: '18px' }} data-customstyle="yes">Основатель и<br /> главный врач клиники, <br />стоматолог-ортопед</span>
               </div>
             </Col>
             <Col xs={10} md={8}>
@@ -291,57 +292,57 @@ function MainContainers({setShow}) {
             </Col>
           </Row>
 
-          
+
           <Row>
-          <h1 className='mt-5'>
-            Чем мы можем вам помочь
-          </h1>
+            <h1 className='mt-5'>
+              Чем мы можем вам помочь
+            </h1>
             <Col lg={6} xs={12}>
-           
-              <a href="/Chec_Up" style={{textDecoration: 'none'}}>
+
+              <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  <h4>
+                  {/* <h4>
                     Провести консультацию
                   </h4>
-                  <br/>
+                  <br /> */}
                   <h5>
                     <a>Первичная консултация</a>
-                    <br/>
+                    <br />
                     <a>Chec_Up улыбки</a>
                   </h5>
                   <h5>
-                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
+                    <img style={{ width: '50%', height: '50%' }} src={strelka} />
                   </h5>
                 </div>
               </a>
             </Col>
             <Col lg={6} xs={12}>
-              <a href="/Chec_Up" style={{textDecoration: 'none'}}>
+              <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                    <h4> Обрести красивую и</h4>
-                    <b/>
-                    <h4>здоровую улыбку</h4>
+                  {/* <h4> Обрести красивую и</h4>
+                  <b />
+                  <h4>здоровую улыбку</h4> */}
 
 
                   <h5>
                     <a>Виниры</a>
-                    <br/>
+                    <br />
                     <a> Люминиры </a>
-                    <br/>
+                    <br />
                     <a> Элайнеры </a>
                   </h5>
                   <h5>
-                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
+                    <img style={{ width: '50%', height: '50%' }} src={strelka} />
                   </h5>
                 </div>
               </a>
             </Col>
             <Col lg={6} xs={12}>
-              <a href="/Chec_Up" style={{textDecoration: 'none'}}>
+              <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  <h4>
+                  {/* <h4>
                     Исправить прикус
-                  </h4>
+                  </h4> */}
                   <h5>
                     <a>Элайнеры</a>
                     <p>Исправление прикуса</p>
@@ -350,69 +351,64 @@ function MainContainers({setShow}) {
 
                   </h5>
                   <h5>
-                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
+                    <img style={{ width: '50%', height: '50%' }} src={strelka} />
                   </h5>
                 </div>
               </a>
             </Col>
             <Col lg={6} xs={12}>
-              <a href="/Chec_Up" style={{textDecoration: 'none'}}>
+              <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  <h4>
+                  {/* <h4>
                     <h4>Получить белоснежную</h4>
-                    <b/>
+                    <b />
                     <h4>
                       улыбку
                     </h4>
-                  </h4>
+                  </h4> */}
                   <h5>
-                    <a> PHILIPS ZOOM 4 </a>
-                    <br/>
+                   
                     <a>AMAZING WHITE</a>
-                    <br/>
+                    <br />
                     <a>Внутри коронковое</a>
-                    <br/>
+                    <br />
                     <a> отбеливание</a>
                   </h5>
                   <h5>
-                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
+                    <img style={{ width: '50%', height: '50%' }} src={strelka} />
                   </h5>
                 </div>
               </a>
             </Col>
             <Col lg={6} xs={12}>
-              <a href="/Chec_Up" style={{textDecoration: 'none'}}>
+              <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  <h4>
-                    Восстановить зубы
-                  </h4>
+                  
                   <h5>
                     <a>Имплантация</a>
-                    <br/>
+                    <br />
                     <a>Протезирования</a>
                   </h5>
                   <h5>
-                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
+                    <img style={{ width: '50%', height: '50%' }} src={strelka} />
                   </h5>
                 </div>
               </a>
             </Col>
             <Col lg={6} xs={12}>
-              <a href="/Chec_Up" style={{textDecoration: 'none'}}>
+              <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  <h4>
-                    Вылечить зубы
-                  </h4>
+                  
                   <h5>
                     <a>Лечение кариеса</a>
-                    <br/>
+                    <br />
                     <a>Сложные случаи</a>
-                    <br/>
+                    <br />
                     <a>Лечение пульпита</a>
-                    <br/>
+                    <br />
                   </h5>
                   <h5>
-                    <img style={{width: '50%', height: '50%'}} src={strelka}/>
+                    <img style={{ width: '50%', height: '50%' }} src={strelka} />
                   </h5>
                 </div>
               </a>
@@ -425,25 +421,25 @@ function MainContainers({setShow}) {
               Почему клиника Айдарова?
             </h1>
             <Col md={4} xs={10}>
-              <Card md={3} xs={10} style={{borderColor: 'black'}}>
-                <img src={komanda}/>
+              <Card md={3} xs={10} style={{ borderColor: 'black' }}>
+                <img src={komanda} />
               </Card>
             </Col>
             <Col md={8} xs={10}>
-              <Accordion defaultActiveKey={['0']} alwaysClose style={{backgroundColor: 'black', color: '#d3bb7e'}}>
+              <Accordion defaultActiveKey={['0']} alwaysClose style={{ backgroundColor: 'black', color: '#d3bb7e' }}>
                 {
                   accordion.map(e => {
                     return (
                       <>
-                        <Accordion.Item eventKey={e.key} style={{backgroundColor: 'black', color: '#d3bb7e'}}>
+                        <Accordion.Item eventKey={e.key} style={{ backgroundColor: 'black', color: '#d3bb7e' }}>
                           <Accordion.Header
-                            style={{backgroundColor: 'black', color: '#d3bb7e'}}>{e.title}</Accordion.Header>
-                          <Accordion.Body style={{backgroundColor: 'black', color: '#d3bb7e'}}>
+                            style={{ backgroundColor: 'black', color: '#d3bb7e' }}>{e.title}</Accordion.Header>
+                          <Accordion.Body style={{ backgroundColor: 'black', color: '#d3bb7e' }}>
                             <p>
                               {e.text}
                             </p>
                             <Card>
-                              <img src={e.img}/>
+                              <img src={e.img} />
                             </Card>
 
 
@@ -461,7 +457,7 @@ function MainContainers({setShow}) {
           </Row>
           <Col md={10} xs={10}>
             <h1
-             className='mt-5 text-center'>
+              className='mt-5 text-center'>
               Наши результаты
             </h1>
           </Col>
@@ -472,7 +468,7 @@ function MainContainers({setShow}) {
                   result.map(e => {
                     return (
 
-                      <Carousel.Item style={{backgroundColor: 'black'}}>
+                      <Carousel.Item style={{ backgroundColor: 'black' }}>
                         <img
                           className="d-block w-100"
                           src={e.img}
@@ -503,7 +499,7 @@ function MainContainers({setShow}) {
                 {
                   feedback.map(e => {
                     return (
-                      <Carousel.Item style={{color: 'white'}}>
+                      <Carousel.Item style={{ color: 'white' }}>
                         <Row>
                           <Col md={6} xs={10}>
                             <img
@@ -534,10 +530,10 @@ function MainContainers({setShow}) {
           </Col>
           <Row>
             <Col md={6} xs={10}>
-              <h4 style={{color: '#d3bb7e', fontFamily: 'GraphikTT Arial sans-serif'}}>
+              <h4 style={{ color: '#d3bb7e', fontFamily: 'GraphikTT Arial sans-serif' }}>
                 Наша команда
               </h4>
-              <h5 style={{color: 'white', fontFamily: 'GraphikTT Arial sans-serif'}}>
+              <h5 style={{ color: 'white', fontFamily: 'GraphikTT Arial sans-serif' }}>
                 Наши пациенты как будто попадают в будущее. Мы можем полностью визуализировать всё для пациентов: на
                 специальных мониторах показать зубы в разных проекциях, в разрезе, можем сделать подробный полный чекап
                 всей зубочелюстной системы. И всё это без временных затрат и с максимальным комфортом.
@@ -550,8 +546,8 @@ function MainContainers({setShow}) {
               </h5>
             </Col>
             <Col md={6} xs={10}>
-              <Card md={6} xs={10} style={{borderColor: 'black'}}>
-                <img src={komanda}/>
+              <Card md={6} xs={10} style={{ borderColor: 'black' }}>
+                <img src={komanda} />
               </Card>
             </Col>
           </Row>
@@ -561,15 +557,15 @@ function MainContainers({setShow}) {
             </h1>
           </Col>
           <Col md={12} xs={10}>
-            <Accordion defaultActiveKey={['0']} alwaysClose style={{backgroundColor: 'black', color: '#d3bb7e'}}>
+            <Accordion defaultActiveKey={['0']} alwaysClose style={{ backgroundColor: 'black', color: '#d3bb7e' }}>
               {
                 accordion2.map(e => {
                   return (
                     <>
-                      <Accordion.Item eventKey={e.key} style={{backgroundColor: 'black', color: '#d3bb7e'}}>
+                      <Accordion.Item eventKey={e.key} style={{ backgroundColor: 'black', color: '#d3bb7e' }}>
                         <Accordion.Header
-                          style={{backgroundColor: 'black', color: '#d3bb7e'}}>{e.title}</Accordion.Header>
-                        <Accordion.Body style={{backgroundColor: 'black', color: '#d3bb7e'}}>
+                          style={{ backgroundColor: 'black', color: '#d3bb7e' }}>{e.title}</Accordion.Header>
+                        <Accordion.Body style={{ backgroundColor: 'black', color: '#d3bb7e' }}>
                           <p>
                             {e.text}
                           </p>

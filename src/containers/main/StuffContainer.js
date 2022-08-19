@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Col, Container, Row, Card, Modal, } from 'react-bootstrap';
+import { Col, Container, Row, Card, } from 'react-bootstrap';
 import Button1 from '../../Button1';
-import CollSenter from '../../components/collSenter/CollSenter';
 import imgg from '../../img/imgg.jpeg'
 
-function StuffContainer() {
+
+function StuffContainer({setShow}) {
 
     const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
+    const [sh, setS] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -72,21 +72,21 @@ function StuffContainer() {
     return (
         <>
             <Container>
-                <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
+                <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Врачи, которым доверяют
-                </p>
+                </h1>
                 <Row>
                     <Col md={6} >
-                        <Card.Text style={{ color: "white", fontSize: "20px" }}>
+                        <h3 style={{ color: "white",  }}>
                             Команда клиники «Лаборатория улыбок Dr. Elmar» специализируется на тотальном преображении улыбки и оказывает все виды стоматологических услуг
-                        </Card.Text>
+                        </h3>
                         <Col sm={6}>
-                        <Button1 />
+                        <Button1 setShow={setShow}/>
 
                         </Col>
                     </Col>
                     <Col className='mt-5'>
-                        <Card.Img src='https://static.tildacdn.com/tild3331-3833-4964-b366-656665383262/photo.svg'>
+                        <Card.Img width={'200px'} src='https://static.tildacdn.com/tild3331-3833-4964-b366-656665383262/photo.svg'>
 
                         </Card.Img>
                     </Col>
@@ -135,32 +135,12 @@ function StuffContainer() {
                                     <Card.Text style={{ color: "white", textAlign: "center" }}> {e.title}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.position}</Card.Text>
                                     <Card.Text style={{ color: "white", textAlign: "center" }}>{e.experience}</Card.Text>
-                                    <div className='div_b text-center' >
-                                        <p> Записаться на прием </p>
-                                    </div>
+                                  <Button1 setShow={setShow}/>
                                 </Col>
                             </>
                         )
                     })}
-                    <Modal show={show} fullscreen={fullscreen} onHide={handleClose} >
-                        <Modal.Header closeButton style={{ backgroundColor: "black", color: "white" }}>
-                            <Modal.Title >Гасанова Шахризат Магомедовна </Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
-                            <Container>
-                                <Row>
-                                    <Col md={3}>
-                                        <Card.Img src={doctors[0].img}></Card.Img>
-                                    </Col>
-                                    <Col>
-                                        {doctors.map(e => e.title === doctors[0].title ? doctors[0].detail : "null")}
-                                    </Col>
-
-                                </Row>
-                            </Container>
-
-                        </Modal.Body>
-                    </Modal>
+                   
                 </Row>
                 <Row className='mt-5'>
                     <p style={{ color: "#d3bb7e", fontSize: "50px", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
