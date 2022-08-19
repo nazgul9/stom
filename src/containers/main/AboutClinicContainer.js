@@ -38,36 +38,35 @@ function AboutClinicContainer({ setShow }) {
     ]
 
     return (
-        <div className='container aboutClinic'>
-            <div className='container mt-5 '>
-                <>
+        <div className='container '>
+            <div className='mt-5 '>
                     <span className='h1 mt-3'>С нами вы<br /> улыбаетесь чаще</span>
                     <Row>
-                        <Col xs={12} md={6} >
+                        <Col sm={6} xs={12} md={6} >
                             <p className='text_nav h5 mt-5'> Команда клиники «Лаборатория улыбок Dr. Айдаров<br />
                                 поможет обрести улыбку мечты. Ответственность. <br />
                                 Профессионализм. Забота о каждом пациенте.</p>
 
-                            <div className='div_a mt-4'>
+                            <Col className='mt-3' sm={6}>
                                 <Button1 setShow={setShow} />
 
-                            </div>
+                            </Col>
                         </Col>
 
-                        <Col xs={12} md={6}>
+                        <Col sm={6}  xs={12} md={6}>
                             <AutoVideo />
                         </Col>
                     </Row>
-                </>
+            
             </div>
 
-            <div className='container text-center ' data-aos="fade-up">
+            <div className='text-center ' data-aos="fade-up">
                 <h1 className='mt-5'>5 причин доверить нам улыбку</h1>
             </div>
-            <div className='container'>
+            <div className=''>
                 <Accordion name={data} />
             </div>
-            <div className='container mt-3'>
+            <div className='mt-3'>
                 <Row>
                     <Col xs={12} md={4} >
                         <img data-aos="fade-up-right" className='w-100 mb-2' src='https://thumb.tildacdn.com/tild6564-6235-4330-b565-353437343734/-/format/webp/IMG_1364_1.jpeg' alt='' />
@@ -81,7 +80,7 @@ function AboutClinicContainer({ setShow }) {
                     </Col>
                 </Row>
             </div>
-            <div className='container mt-5'>
+            <div className=' mt-5'>
                 <Row>
                     <Col xs={12} md={6} lg={6}>
                         <div data-aos="zoom-in" className='justify-content-evenly a text-center' >
@@ -108,7 +107,7 @@ function AboutClinicContainer({ setShow }) {
                 </Row>
             </div>
 
-            <div className='container mt-5'>
+            <div className=' mt-5'>
                 <Row >
                     <Col xs={12} md={6} lg={6}>
                         <div className='d-block'><span className=' h1'>Давайте познакомимся <br />поближе</span>
@@ -138,7 +137,7 @@ function AboutClinicContainer({ setShow }) {
             <h1 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom" className='text_nav text-center mt-5'>Здесь вы можете:</h1>
             <div className='container row m-3 p-2'>
-                <Col xs={10} md={6} lg={5}>
+                <Col xs={10} md={6} lg={5} sm={6}>
                     <h3 data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom" class="tn-atom text-center  p-2 m-2">почитать журналы</h3>
                 </Col>
@@ -157,7 +156,7 @@ function AboutClinicContainer({ setShow }) {
                         data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
                 </Col>
             </div>
-            <StuffContainer />
+            <StuffContainer setShow={setShow}/>
             <RunText />
 
         </div>

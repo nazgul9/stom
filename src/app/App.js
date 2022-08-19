@@ -24,6 +24,7 @@ function App(props) {
   return (
     <>
       <AppContainers />
+      
       <Routes>
         <Route path={'/'} element={<MainContainers setShow={setShow}/>} />
         <Route path={'/aboutClinic'} element={<AboutClinicContainer  setShow={setShow}/>} />

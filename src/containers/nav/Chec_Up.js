@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import CollSenter from '../../components/collSenter/CollSenter';
 import AutoVideo from '../../components/Vidoe/AutoVideo'
 import RunText from '../../components/runText/RunText'
 import Accordion from '../../components/accrdion/Accordion'
@@ -63,7 +62,7 @@ function Chec_Up({ setShow }) {
                 <h1 className='mt-5'>
                     Полный чекап. Пошаговый план до улыбки мечты
                 </h1>
-                <Col md={6} xs={10}>
+                <Col sm={6} xs={12} md={6}>
                     <Card.Text style={{ color: "white", fontSize: "20px" }}>
                         Комплексная проверка состояния полости рта. Разработка этапов лечения. Консилиум опытных врачей клиники для составления персонального плана по созданию идеально ровной и красивой улыбки.
                     </Card.Text>
@@ -71,7 +70,7 @@ function Chec_Up({ setShow }) {
                         <Button1 setShow={setShow} />
                     </Col>
                 </Col>
-                <Col className='mt-5'>
+                <Col sm={6} xs={12} md={6} className='mt-5'>
                     <AutoVideo name={data} />
                 </Col>
             </Row>
