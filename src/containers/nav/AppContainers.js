@@ -9,7 +9,7 @@ function AppContainers(props) {
       <Navbar style={{
         backgroundColor: '#060608',
       }} bg="dark" variant="dark" expand="lg" fixed="top">
-        <Container className={'d-flex justify-content-between align-items-center w-100'}>
+        <Container>
           <Navbar.Brand href="/">
             <img
               style={{width: '70px', borderRadius: '50%'}} alt={''}
@@ -42,8 +42,8 @@ function AppContainers(props) {
           <a href={'tel:+996776245758'} className={'p-2 rounded'} style={{
             color: 'white',
             backgroundColor: '#c2b285',
-            width: '270px',
-            fontSize: '25px',
+            // width: '270px',
+            // fontSize: '25px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

@@ -152,9 +152,14 @@ function AboutClinicContainer({ setShow }) {
                 </Col> <Col xs={10} md={6} lg={5}>
                     <h3 data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">пообщаться с сотрудниками</h3>
-                </Col> <Col xs={10} md={6} lg={5}>
+                </Col> 
+                <Col xs={10} md={6} lg={5}>
                     <h3 data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">расслабиться в массажном кресле</h3>
+                </Col>
+                <Col xs={10} md={6} lg={5}>
+                    <h3 data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom" class="tn-atom text-center p-2 m-2">получать белоснежную улыбку</h3>
                 </Col>
             </div>
             <StuffContainer />
