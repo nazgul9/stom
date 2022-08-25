@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Col, Container, Row, Card, } from 'react-bootstrap';
 import Button1 from '../../Button1';
 import imgg from '../../img/imgg.jpeg'
+import patient1 from '../Image/patient1.jpg'
+import patient2 from '../Image/patient2.jpg'
+import patient5 from '../Image/patient5.jpg'
 
 
 function StuffContainer({setShow}) {
 
-    const [fullscreen, setFullscreen] = useState(true);
-    const [sh, setS] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+   
 
     const doctors = [
         {
@@ -53,19 +53,19 @@ function StuffContainer({setShow}) {
 
     const patients = [
         {
-            img: "https://thumb.tildacdn.com/tild3534-3033-4632-b064-356232633331/-/cover/720x1100/center/center/-/format/webp/G_98zN2SdVE.jpg",
-            title: "Гусейн Гасанов",
-            known_for: "Популярный блогер",
+            img: `${patient1}`,
+            title: "TITLE",
+            known_for: "TEXT",
         },
         {
-            img: "https://thumb.tildacdn.com/tild3732-3830-4331-a262-666239323531/-/cover/720x1100/center/center/-/format/webp/sQWk_o_d9Lg.jpg",
-            title: "Walter",
-            known_for: "Совладелец Black Star ",
+            img: `${patient2}`,
+            title: "TITLE",
+            known_for: "TEXT",
         },
         {
-            img: "https://thumb.tildacdn.com/tild3761-3534-4239-b039-323636666563/-/cover/720x1100/center/center/-/format/webp/nhlrP-q6gb4.jpg",
-            title: "Клаво Кока",
-            known_for: "Black Star",
+            img: `${patient5}`,
+            title: "TITLE",
+            known_for: "TEXT",
         }
     ]
 

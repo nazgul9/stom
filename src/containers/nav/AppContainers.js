@@ -9,7 +9,7 @@ function AppContainers(props) {
       <Navbar style={{
         backgroundColor: '#060608',
       }} bg="dark" variant="dark" expand="lg" fixed="top">
-        <Container className={'d-flex justify-content-between align-items-center '}>
+        <Container className={'d-flex justify-content-between align-items-center w-100'}>
           <Navbar.Brand href="/">
             <img
               width="80px"
@@ -43,8 +43,8 @@ function AppContainers(props) {
           <a href={'tel:+996776000000'} className={'p-2 rounded'} style={{
             color: 'white',
             backgroundColor: '#c2b285',
-            // width: '270px',
-            // fontSize: '25px',
+            width: '270px',
+            fontSize: '25px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -56,12 +56,10 @@ function AppContainers(props) {
       <div style={{background: '#c2b285', height: '30px', marginTop: 100, border: '1px solid #c2b285', width: '100%'}}>
         <Row>
           <Col style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
-
             <p className="textdiv"> Хиты услуг : </p>
             <p className="textdiv">Голливудская улыбка</p>
             <p className="textdiv">Выравнивание зубов</p>
             <p className="textdiv">Отбеливание зубов</p>
-
           </Col>
         </Row>
       </div>
