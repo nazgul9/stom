@@ -9,6 +9,7 @@ import imgg from '../../img/imgg.jpeg'
 import Button1 from '../../Button1';
 
 
+
 function AboutClinicContainer({ setShow }) {
     useEffect(() => {
         AOS.init();
