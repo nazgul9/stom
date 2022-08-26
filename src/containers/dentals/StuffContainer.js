@@ -8,9 +8,6 @@ import patient5 from '../Image/patient5.jpg'
 
 
 function StuffContainer({setShow}) {
-
-   
-
     const doctors = [
         {
             id: 1,
@@ -50,7 +47,6 @@ function StuffContainer({setShow}) {
             detail: "fggh",
         },
     ]
-
     const patients = [
         {
             img: `${patient1}`,
@@ -68,10 +64,9 @@ function StuffContainer({setShow}) {
             known_for: "TEXT",
         }
     ]
-
     return (
         <>
-            <Container>
+            <Container style={{marginTop:"100px"}}>
                 <h1 style={{ color: "#d3bb7e", fontFamily: 'GraphikTT Arial sans-serif', marginTop: "50px" }}>
                     Врачи, которым доверяют
                 </h1>

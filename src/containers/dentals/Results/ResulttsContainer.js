@@ -1,11 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import AutoVideo from "../../../components/Vidoe/AutoVideo"
+import AutoVideo from '../../../components/Vidoe/AutoVideo';
 
 function ResulttsContainer(props) {
     return (
-        <div className='container '>
+        <div className='container 'style={{ marginTop: "100px" }}>
             <div className='container mt-5 '>
                 <>
                     <span className='h1 mt-3'>Страница находится<br />в разработке</span>

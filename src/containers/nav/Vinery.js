@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import RunText from '../../components/runText/RunText';
 import AOS from 'aos'
 import AutoVideo from '../../components/Vidoe/AutoVideo';
-import StuffContainer from '../../containers/main/StuffContainer'
+import StuffContainer from '../dentals/StuffContainer';
 import imgg from '../../img/imgg.jpeg'
 import Button1 from '../../Button1'
 

@@ -172,39 +172,36 @@ function MainContainers({ setShow }) {
 
   return (
     <>
-      <Container>
-        <Row className="mt-5">
-          <Col md={6} xs={10}>
-            <h1>
+      <Container style={{ marginTop: "100px" }}>
+        <Row >
+          <Col sm={2} md={6} xs={10}>
+            <h1 className='text-center'>
               Ваша улыбка - наша забота!
             </h1>
 
-            <Card.Text style={{ color: 'white', fontSize: '20px' }}>
+            <h2 style={{ color: "white" }}>
               Превратите её в свою визитную карточку, как это уже сделали многие звёзды, певцы, спортсмены, политики и
               предприниматели
-            </Card.Text>
-            <Col sm={6} className="text-center"> <Button1 setShow={setShow} /></Col>
+            </h2>
+            <div className="text-center col-sm-6"> <Button1 setShow={setShow} /></div>
 
           </Col>
           <Col md={6} xs={10}>
-            <Card md={6} xs={8} style={{ backgroundColor: 'black' }}>
+            <Card md={6} style={{ backgroundColor: 'black' }}>
               <img src={aidarov2} />
             </Card>
           </Col>
         </Row>
       </Container>
       <Container>
-      <RunText />
-
         <Row>
           <Row className="mt-5">
             <Col md={6} xs={10}>
-              <Card md={6} xs={10} style={{ backgroundColor: 'black' }}>
+              <Card md={6} xs={10} style={{ backgroundColor: 'black', }}>
                 <img src={aidarov} />
               </Card>
-
             </Col>
-            <Col md={6} xs={10} style={{ color: 'white', fontSize: '20px' }}>
+            <Col md={6} xs={10} style={{ color: 'white', }}>
               <Card.Text>
                 <b> Здравствуйте!
                   Меня зовут Бекмамат Айдаров.
@@ -245,23 +242,21 @@ function MainContainers({ setShow }) {
               Наши довольные пациенты
             </h1>
           </Col>
-
           <Row className="mt-5 ">
-
             <Col md={4} xs={10}>
               <Card md={4} xs={10} className="m-2">
-                <img src={patient1}  />
+                <img src={patient1} />
               </Card>
 
             </Col>
             <Col md={4} xs={10}>
-              <Card md={4} xs={10}className="m-2">
+              <Card md={4} xs={10} className="m-2">
                 <img src={patient5} />
               </Card>
 
             </Col>
             <Col md={4} xs={10}>
-              <Card md={4} xs={10}className="m-2">
+              <Card md={4} xs={10} className="m-2">
                 <img src={patient2} />
               </Card>
 
@@ -301,10 +296,6 @@ function MainContainers({ setShow }) {
 
               <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  {/* <h4>
-                    Провести консультацию
-                  </h4>
-                  <br /> */}
                   <h5>
                     <a>Первичная консултация</a>
                     <br />
@@ -319,11 +310,6 @@ function MainContainers({ setShow }) {
             <Col lg={6} xs={12}>
               <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  {/* <h4> Обрести красивую и</h4>
-                  <b />
-                  <h4>здоровую улыбку</h4> */}
-
-
                   <h5>
                     <a>Виниры</a>
                     <br />
@@ -340,15 +326,10 @@ function MainContainers({ setShow }) {
             <Col lg={6} xs={12}>
               <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  {/* <h4>
-                    Исправить прикус
-                  </h4> */}
                   <h5>
                     <a>Элайнеры</a>
                     <p>Исправление прикуса</p>
                     <p>сразу на винирах</p>
-
-
                   </h5>
                   <h5>
                     <img style={{ width: '50%', height: '50%' }} src={strelka} />
@@ -359,15 +340,7 @@ function MainContainers({ setShow }) {
             <Col lg={6} xs={12}>
               <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  {/* <h4>
-                    <h4>Получить белоснежную</h4>
-                    <b />
-                    <h4>
-                      улыбку
-                    </h4>
-                  </h4> */}
-                  <h5>
-                   
+                 <h5>
                     <a>AMAZING WHITE</a>
                     <br />
                     <a>Внутри коронковое</a>
@@ -383,7 +356,7 @@ function MainContainers({ setShow }) {
             <Col lg={6} xs={12}>
               <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  
+
                   <h5>
                     <a>Имплантация</a>
                     <br />
@@ -398,7 +371,7 @@ function MainContainers({ setShow }) {
             <Col lg={6} xs={12}>
               <a href="/Chec_Up" style={{ textDecoration: 'none' }}>
                 <div className="help">
-                  
+
                   <h5>
                     <a>Лечение кариеса</a>
                     <br />
@@ -413,9 +386,7 @@ function MainContainers({ setShow }) {
                 </div>
               </a>
             </Col>
-
           </Row>
-
           <Row>
             <h1 className='mt-5 mb-3 text-center'>
               Почему клиника Айдарова?
@@ -441,8 +412,6 @@ function MainContainers({ setShow }) {
                             <Card>
                               <img src={e.img} />
                             </Card>
-
-
                           </Accordion.Body>
                         </Accordion.Item>
                       </>
@@ -450,9 +419,7 @@ function MainContainers({ setShow }) {
                     )
                   })
                 }
-
               </Accordion>
-
             </Col>
           </Row>
           <Col md={10} xs={10}>
@@ -477,14 +444,11 @@ function MainContainers({ setShow }) {
                         <Carousel.Caption>
                           <h3>{e.text}</h3>
                         </Carousel.Caption>
-
                       </Carousel.Item>
-
                     )
                   })
                 }
               </Carousel>
-
             </Col>
           </Row>
           <Row>
@@ -493,7 +457,6 @@ function MainContainers({ setShow }) {
                 Наши отзывы
               </h1>
             </Col>
-
             <Col md={12} xs={10} className="mt-5">
               <Carousel fade>
                 {
@@ -572,7 +535,6 @@ function MainContainers({ setShow }) {
                         </Accordion.Body>
                       </Accordion.Item>
                     </>
-
                   )
                 })
               }

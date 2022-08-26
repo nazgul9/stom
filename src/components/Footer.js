@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../Image/doctor.jpg'
+import image from './doctor.jpg'
 
 function Footer() {
   return (
