@@ -40,20 +40,22 @@ function AppContainers(props) {
 
             </Nav>
           </Navbar.Collapse>
+          <h2>
+{/*             
           <a href={'tel:+996776000000'} className={'p-2 rounded'} style={{
             color: 'white',
             backgroundColor: '#c2b285',
-            width: '270px',
-            fontSize: '25px',
+            width: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-            +996 (776) 000 000
-          </a>
+            tel
+          </a> */}
+          </h2>
         </Container>
       </Navbar>
-      <div style={{background: '#c2b285', height: '30px', marginTop: 100, border: '1px solid #c2b285', width: '100%'}}>
+      {/* <div style={{background: '#c2b285', height: '30px', marginTop: 100, border: '1px solid #c2b285', width: '100%'}}>
         <Row>
           <Col style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
             <p className="textdiv"> Хиты услуг : </p>
@@ -62,7 +64,7 @@ function AppContainers(props) {
             <p className="textdiv">Отбеливание зубов</p>
           </Col>
         </Row>
-      </div>
+      </div> */}
     </Container>
   )
 }

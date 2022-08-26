@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { Row, Card, Col, Button } from 'react-bootstrap';
 import Accordion from '../../components/accrdion/Accordion';
 import AutoVideo from '../../components/Vidoe/AutoVideo'
-import StuffContainer from '../../containers/main/StuffContainer'
+
 import RunText from '../../components/runText/RunText';
 import AOS from "aos";
 import imgg from '../../img/imgg.jpeg'
 import Button1 from '../../Button1';
+import StuffContainer from './StuffContainer';
 
 
 
@@ -39,18 +40,16 @@ function AboutClinicContainer({ setShow }) {
     ]
 
     return (
-        <div className='container '>
-            <div className='mt-5 '>
-                    <span className='h1 mt-3'>С нами вы<br /> улыбаетесь чаще</span>
+        <div className='container  mt-5'>
+            <div className='mt-5 text-center '>
+                    <div className='text-center'>С нами вы<br /> улыбаетесь чаще</div>
                     <Row>
                         <Col sm={6} xs={12} md={6} >
-                            <p className='text_nav h5 mt-5'> Команда клиники «Лаборатория улыбок Dr. Айдаров<br />
+                            <p className='text_nav  h5 mt-5'> Команда клиники «Лаборатория улыбок Dr. Айдаров<br />
                                 поможет обрести улыбку мечты. Ответственность. <br />
                                 Профессионализм. Забота о каждом пациенте.</p>
-
                             <Col className='mt-3' sm={6}>
                                 <Button1 setShow={setShow} />
-
                             </Col>
                         </Col>
 

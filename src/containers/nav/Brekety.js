@@ -178,10 +178,10 @@ function Brekety({ setShow }) {
                         <Card.Img className="h-75 w-75" src='https://thumb.tildacdn.com/tild3566-6431-4366-b763-623237323237/-/resize/864x/-/format/webp/Typodont_Teeth_Model.png'>
                         </Card.Img>
                     </Col>
-                    <Col md={6} className={"m-5"}>
-                        <span style={{ color: "#d3bb7e", fontSize: "25px", }}>
+                    <Col md={6} >
+                        <h2 style={{ color: "#d3bb7e", fontSize: "25px", }}>
                             Несъёмная конструкция  зубной ряд
-                        </span>
+                        </h2>
                         <span style={{ color: "white", fontSize: "25px" }}>
                             , которая фиксируется на наружную или внутреннюю поверхность зубов и  плавно выравнивает
                         </span>
